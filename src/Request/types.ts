@@ -1,7 +1,7 @@
 import { Methods, ResponseFormat } from '@/Host/types';
 
 export interface RequestParams {
-  [key: string]: any
+  [key: string]: unknown
 }
 
 export interface RequestOptions {
@@ -9,8 +9,8 @@ export interface RequestOptions {
   method: Methods;
   path: string;
   payload: {
-    data: FormData | Record<string, any> | string,
-    params: Record<string, any>
+    data: FormData | Record<string, unknown> | string,
+    params: Record<string, unknown>
   }
 }
 
@@ -25,4 +25,4 @@ export interface ProgressEvent {
   download?: boolean;
 }
 
-export type RequestEvents = 'progress:download' | 'progress:upload' | 'progress';
+export type RequestEvents = 'progress:download' | 'progress:upload' | 'progress' | 'error' | 'load' | 'cancel';

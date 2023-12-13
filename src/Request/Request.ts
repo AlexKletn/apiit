@@ -1,25 +1,29 @@
 import { AxiosInstance } from 'axios';
-import mitt from 'mitt';
 
-import type { Response } from '@/ResponseParser';
+import type { Response, ResponseOptions } from '@/ResponseParser';
 import { ResponseParser } from '@/ResponseParser';
 
 import type { RequestEvents, RequestOptions } from '@/Request';
+import { Events } from '@/Events';
 
 class Request<ResponseType> {
-  #emitter = mitt();
-  #requestPromise: Promise<Response<ResponseType>>;
+  readonly #controller = new AbortController();
+  readonly #requestPromise: Promise<Response<ResponseType> | void>;
+
+  // eslint-disable-next-line max-len
+  readonly #events = new Events<RequestEvents, ProgressEvent | ResponseOptions<ResponseType> | Error>();
 
   constructor({
     method, path, payload, responseFormat,
   }: RequestOptions, axios: AxiosInstance) {
-    const emit = this.#emit.bind(this);
+    const emit = this.#events.emit.bind(this);
 
     this.#requestPromise = axios
       .request<ResponseType>({
       method,
       url: path,
       responseType: responseFormat,
+      signal: this.#controller.signal,
 
       ...payload,
 
@@ -32,26 +36,34 @@ class Request<ResponseType> {
         emit('progress', e);
       },
     })
-      .then(({ data, headers }) => ResponseParser.parse<ResponseType>({
-        data,
-        headers,
-      }));
+      .then((res) => this.#responseReturn(res))
+      .catch((err) => {
+        this.#events.emit('error', err);
+      });
   }
 
   async getResult() {
     return this.#requestPromise;
   }
 
+  cancel() {
+    this.#controller.abort();
+    this.#events.emit('cancel', null);
+  }
+
   on(event: RequestEvents, handler: (event: ProgressEvent) => void) {
-    this.#emitter.on(event, handler);
+    this.#events.on(event, handler);
   }
 
   off(event: RequestEvents, handler: (event: ProgressEvent) => void) {
-    this.#emitter.off(event, handler);
+    this.#events.off(event, handler);
   }
 
-  #emit(event: RequestEvents, payload: ProgressEvent) {
-    this.#emitter.emit(event, payload);
+  #responseReturn(options: ResponseOptions<ResponseType>) {
+    const response = ResponseParser.parse<ResponseType>(options);
+    this.#events.emit('load', response);
+
+    return response;
   }
 }
 

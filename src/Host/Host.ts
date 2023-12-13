@@ -1,12 +1,14 @@
 import axios, { AxiosInstance } from 'axios';
-
 import { Endpoint } from '@/Endpoint';
 import type { EndpointOptions } from '@/Endpoint/types';
 import type { RequestParams } from '@/Request';
 
-import type { Methods } from './types';
+import type { HostEvents, Methods } from './types';
+import { Events } from '@/Events';
 
 class Host {
+  readonly #events = new Events<HostEvents>();
+
   static getHeaders(headers: Record<string, string | (() => string)>) {
     const headersEntries = Object.entries(headers);
 
@@ -33,6 +35,7 @@ class Host {
     });
 
     this.#applyHeadersGetter(headers);
+    this.#setEvents();
   }
 
   createEndpoint<RequestType extends RequestParams, ResponseType>(
@@ -44,6 +47,14 @@ class Host {
     },
   ): Endpoint<RequestType, ResponseType> {
     return new Endpoint<RequestType, ResponseType>(this.#axios, method, path, options);
+  }
+
+  on(event: HostEvents, handler: (event: Error | Record<string, unknown>) => void) {
+    this.#events.on(event, handler);
+  }
+
+  off(event: HostEvents, handler: (event: Error | Record<string, unknown>) => void) {
+    this.#events.off(event, handler);
   }
 
   #applyHeadersGetter(headers: Record<string, string | (() => string)>) {
@@ -59,6 +70,27 @@ class Host {
 
       return config;
     });
+  }
+
+  #setEvents() {
+    this.#axios.interceptors.request.use((config) => {
+      this.#events.emit('request', config);
+
+      return config;
+    });
+
+    this.#axios.interceptors.response.use(
+      (response) => {
+        this.#events.emit('success', response);
+
+        return response;
+      },
+      (error) => {
+        this.#events.emit('error', error);
+
+        return error;
+      },
+    );
   }
 }
 
