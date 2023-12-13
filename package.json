@@ -16,7 +16,7 @@
     "lib"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT License",
   "devDependencies": {
     "@types/xml": "^1.0.11",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
