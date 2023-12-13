@@ -3,7 +3,7 @@
   "version": "0.0.10",
   "description": "",
   "main": "./lib/lib.js",
-  "type": "./lib/lib.d.ts",
+  "types": "./lib/lib.d.ts",
   "scripts": {
     "build": "tsc && resolve-tspaths",
     "build:watch": "tsc -w"
