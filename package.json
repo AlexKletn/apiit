@@ -1,12 +1,12 @@
 {
-  "name": "api-q",
+  "name": "beerapi",
   "version": "0.0.11",
   "description": "Library for creating an organized API layer",
   "main": "./lib/lib.js",
   "types": "./lib/lib.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexKletn/api-q.git"
+    "url": "https://github.com/AlexKletn/beerapi.git"
   },
   "scripts": {
     "build": "tsc && resolve-tspaths",
