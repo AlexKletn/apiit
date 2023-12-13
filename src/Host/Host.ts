@@ -1,10 +1,10 @@
 import axios, { AxiosInstance } from 'axios';
+import { Events } from '@/EventsEmitter';
 import { Endpoint } from '@/Endpoint';
 import type { EndpointOptions } from '@/Endpoint/types';
 import type { RequestParams } from '@/Request';
 
 import type { HostEvents, Methods } from './types';
-import { Events } from '@/Events';
 
 class Host {
   readonly #events = new Events<HostEvents>();

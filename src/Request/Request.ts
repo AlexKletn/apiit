@@ -1,22 +1,22 @@
 import { AxiosInstance } from 'axios';
 
+import { Events } from '@/EventsEmitter';
 import type { Response, ResponseOptions } from '@/ResponseParser';
 import { ResponseParser } from '@/ResponseParser';
 
-import type { RequestEvents, RequestOptions } from '@/Request';
-import { Events } from '@/Events';
+import type { ProgressEvent, RequestEvents, RequestOptions } from './types';
 
 class Request<ResponseType> {
   readonly #controller = new AbortController();
-  readonly #requestPromise: Promise<Response<ResponseType> | void>;
+  readonly #requestPromise: Promise<Response<ResponseType>>;
 
   // eslint-disable-next-line max-len
-  readonly #events = new Events<RequestEvents, ProgressEvent | ResponseOptions<ResponseType> | Error>();
+  readonly #events = new Events<RequestEvents>();
 
   constructor({
     method, path, payload, responseFormat,
   }: RequestOptions, axios: AxiosInstance) {
-    const emit = this.#events.emit.bind(this);
+    const emit = this.#events.emit.bind(this.#events);
 
     this.#requestPromise = axios
       .request<ResponseType>({
@@ -39,6 +39,8 @@ class Request<ResponseType> {
       .then((res) => this.#responseReturn(res))
       .catch((err) => {
         this.#events.emit('error', err);
+
+        throw err;
       });
   }
 
@@ -51,7 +53,10 @@ class Request<ResponseType> {
     this.#events.emit('cancel', null);
   }
 
-  on(event: RequestEvents, handler: (event: ProgressEvent) => void) {
+  on<Payload>(
+    event: RequestEvents,
+    handler: (event: Payload) => void,
+  ) {
     this.#events.on(event, handler);
   }
 

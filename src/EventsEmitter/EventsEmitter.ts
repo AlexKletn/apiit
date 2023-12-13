@@ -1,6 +1,6 @@
 import mitt from 'mitt';
 
-class Events<Events extends string, Payloads = unknown> {
+class EventsEmitter<Events extends string, Payloads = unknown> {
   #emitter = mitt();
 
   on(event: Events, handler: (event: Payloads) => void) {
@@ -16,4 +16,4 @@ class Events<Events extends string, Payloads = unknown> {
   }
 }
 
-export default Events;
+export default EventsEmitter;
