@@ -1,6 +1,6 @@
-repository / [Exports](modules.md)
+Apiit / [Exports](modules.md)
 
-Repository 
+Apiit 
 ---
 
 *Library for creating an organized API layer*

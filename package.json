@@ -1,6 +1,6 @@
 {
-  "name": "repository",
-  "version": "0.0.21",
+  "name": "apiit",
+  "version": "0.0.10",
   "description": "",
   "main": "./lib/lib.js",
   "types": "./lib/lib.d.ts",
