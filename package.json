@@ -1,6 +1,6 @@
 {
   "name": "repository",
-  "version": "1.0.10",
+  "version": "0.0.10",
   "description": "",
   "main": "./lib/lib.js",
   "type": "./lib/lib.d.ts",
