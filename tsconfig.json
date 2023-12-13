@@ -2,12 +2,14 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "es2022",
+    "lib": [ "es2015", "dom" ],
     "removeComments": true,
-    "outDir": "js",
+    "outDir": "./lib",
     "sourceMap": true,
-    "module": "ESNext",
-    "moduleResolution": "node16",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "baseUrl": "./src",
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": [

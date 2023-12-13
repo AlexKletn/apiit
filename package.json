@@ -1,12 +1,16 @@
 {
   "name": "repository",
-  "version": "1.0.0",
+  "version": "1.0.10",
   "description": "",
-  "main": "./src/lib.ts",
+  "main": "./lib/lib.js",
+  "type": "./lib/lib.d.ts",
   "scripts": {
-    "build": "tsc ./src/lib.ts --removeComments",
+    "build": "tsc && resolve-tspaths",
     "build:watch": "tsc -w"
   },
+  "files": [
+    "lib"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -16,13 +20,12 @@
     "eslint": "^8.53.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
+    "resolve-tspaths": "^0.8.17",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "axios": "^1.6.1",
-    "emittery": "^1.0.1",
     "mitt": "^3.0.1",
-    "url-fns": "^1.2.1",
-    "xml": "^1.0.1"
+    "url-fns": "^1.2.1"
   }
 }
