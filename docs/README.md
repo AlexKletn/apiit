@@ -1,9 +1,10 @@
+repository / [Exports](modules.md)
+
 Repository 
 ---
 
 *Library for creating an organized API layer*
 
-repository / [Docs](modules.md)
 Features
 ---
 * Defining an endpoint as a reusable function
