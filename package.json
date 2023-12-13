@@ -1,5 +1,5 @@
 {
-  "name": "beerapi",
+  "name": "@alexqkletn/apiit",
   "version": "0.0.11",
   "description": "Library for creating an organized API layer",
   "main": "./lib/lib.js",
