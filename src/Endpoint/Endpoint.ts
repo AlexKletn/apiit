@@ -7,13 +7,13 @@ import { Request } from '@/Request';
 import type { DataFormat, Methods } from '@/Host';
 import type { EndpointOptions, ParamsConfig } from './types';
 
-class Endpoint<RequestType, ResponseType> {
+class Endpoint<RequestType extends RequestParams, ResponseType> {
   static generateParams(
     payload: RequestParams = {},
     dataFormat: DataFormat = 'json',
     paramsConfig: ParamsConfig = {},
   ) {
-    const body = Endpoint.generateBody(payload, dataFormat, paramsConfig);
+    const body = Endpoint.generateBody(payload, paramsConfig, dataFormat);
     const query = Endpoint.generateQuery(payload, paramsConfig);
     const pathParams = Endpoint.generatePathParams(payload, paramsConfig);
 
@@ -24,9 +24,9 @@ class Endpoint<RequestType, ResponseType> {
     };
   }
 
-  static generateBody(payload: RequestParams, dataFormat: DataFormat = 'json', paramsConfig: ParamsConfig) {
+  static generateBody(payload: RequestParams, paramsConfig: ParamsConfig, dataFormat: DataFormat = 'json') {
     if (dataFormat === 'string') {
-      return payload.body;
+      return payload.body as string;
     }
 
     const body = {};
