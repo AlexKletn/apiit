@@ -15,7 +15,7 @@
   "files": [
     "lib"
   ],
-  "author": "",
+  "author": "AlexKletn",
   "license": "MIT License",
   "devDependencies": {
     "@types/xml": "^1.0.11",
