@@ -28,98 +28,98 @@ Usage
     const siteSubpathAsHost = createHost("/api");
     ```
 * Create endpoint
-  *
+  * create
     ```typescript    
-      host.createEndpoint('get', '/foo')
+    host.createEndpoint('get', '/foo')
     ```
   *
     ```typescript    
-      type RequestPayload = {
-        filter: { name: string }
-      }
-    
-      type ResponseData = {
-        id: string
-        name: string
-      }
-      host.createEndpoint<RequestPayload, ResponseData>('get', '/foo', {
-        paramsConfig: {
-          filter: {
-            in: "query"
-          }
+    type RequestPayload = {
+      filter: { name: string }
+    }
+  
+    type ResponseData = {
+      id: string
+      name: string
+    }
+    host.createEndpoint<RequestPayload, ResponseData>('get', '/foo', {
+      paramsConfig: {
+        filter: {
+          in: "query"
         }
-      })
+      }
+    })
     ```
   *
     ```typescript   
-      type RequestPayload = {
-        id: string
-      }
-    
-      type ResponseData = {
-        id: string
-        name: string
-      }
-    
-      host.createEndpoint<RequestPayload, ResponseData>('get', '/foo/:id', {
-        paramsConfig: {
-          id: {
-            in: "path"
-          }
+    type RequestPayload = {
+      id: string
+    }
+  
+    type ResponseData = {
+      id: string
+      name: string
+    }
+  
+    host.createEndpoint<RequestPayload, ResponseData>('get', '/foo/:id', {
+      paramsConfig: {
+        id: {
+          in: "path"
         }
-      })
+      }
+    })
     ```
   *
     ```typescript       
-      host.createEndpoint('get', '/foo/:id', {
-        paramsConfig: {
-          id: {
-            in: "path"
-          }
+    host.createEndpoint('get', '/foo/:id', {
+      paramsConfig: {
+        id: {
+          in: "path"
         }
-      })
+      }
+    })
     ```
   *
     ```typescript 
-      type RequestPayload = {
-        name: string
-      }
-    
-      host.createEndpoint<RequestPayload, void>('post', '/foo', {
-        paramsConfig: {
-          name: {
-            in: "body"
-          }
+    type RequestPayload = {
+      name: string
+    }
+  
+    host.createEndpoint<RequestPayload, void>('post', '/foo', {
+      paramsConfig: {
+        name: {
+          in: "body"
         }
-      })
+      }
+    })
     ``` 
 * Endpoint Request
   * ```typescript
-      const endpoint = host.createEndpoint<RequestPayload, ResponseData>('get', '/foo', {
-        paramsConfig: {
-          filter: {
-            in: "query"
-          }
-        }
-      })
-    
-      const request = endpoint.request({
+    const endpoint = host.createEndpoint<RequestPayload, ResponseData>('get', '/foo', {
+      paramsConfig: {
         filter: {
-          type: 'bar'
+          in: "query"
         }
-      });
-    
-      request.on(event, (payload) => {
-        // code
-      })
+      }
+    })
+  
+    const request = endpoint.request({
+      filter: {
+        type: 'bar'
+      }
+    });
+  
+    request.on(event, (payload) => {
+      // code
+    })
     ```
   *
     ```typescript
-      const response = await endpoint.request({
-        filter: {
-          type: 'bar'
-        }
-      }).getResult();
+    const response = await endpoint.request({
+      filter: {
+        type: 'bar'
+      }
+    }).getResult();
     ```
 
 Proposed structure of the API layer
@@ -144,24 +144,24 @@ Proposed structure of the API layer
       * `types.ts` - entity types
       * or `methods.ts`
         ```typescript
-          import apiHost from '@/api/hosts/apiHost'
-          import type { EntityType } from './types.ts'
-        
-          const entityEndpoint = apiHost.createEndpoint<FiltersType, EntityType[]>(/* endpoint config */);
-        
-          export { entityEndpoint };
+        import apiHost from '@/api/hosts/apiHost'
+        import type { EntityType } from './types.ts'
+      
+        const entityEndpoint = apiHost.createEndpoint<FiltersType, EntityType[]>(/* endpoint config */);
+      
+        export { entityEndpoint };
         ```
       * or `<entity action><Entity name>.ts`
         ```typescript
-          import apiHost from '@/api/hosts/apiHost'
-        
-          const entityEndpoint = apiHost.createEndpoint(/* endpoint config */);
-        
-          export default entityEndpoint;
+        import apiHost from '@/api/hosts/apiHost'
+      
+        const entityEndpoint = apiHost.createEndpoint(/* endpoint config */);
+      
+        export default entityEndpoint;
         ```
       * `index.ts`
         ```typescript
-          export * from './methods.ts'
-          // or
-          export { default as entityAction } from './entityAction.ts'
+        export * from './methods.ts'
+                         // or
+        export { default as entityAction } from './entityAction.ts'
         ```
