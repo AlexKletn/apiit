@@ -3,7 +3,7 @@ Repository
 
 *Library for creating an organized API layer*
 
-repository / [Docs](docs/modules.md)
+[Api docs](docs/modules.md)
 
 Features
 ---
