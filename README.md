@@ -3,7 +3,8 @@ Repository
 
 *Library for creating an organized API layer*
 
-repository / [Docs](modules.md)
+repository / [Docs](docs/modules.md)
+
 Features
 ---
 * Defining an endpoint as a reusable function
