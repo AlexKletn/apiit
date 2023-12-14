@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[src/ResponseParser/ResponseParser.ts:4](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/ResponseParser.ts#L4)
+[src/ResponseParser/ResponseParser.ts:4](https://github.com/AlexKletn/apiit/blob/21e19d0/src/ResponseParser/ResponseParser.ts#L4)

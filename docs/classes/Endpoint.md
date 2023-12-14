@@ -25,6 +25,7 @@
 ### Methods
 
 - [request](Endpoint.md#request)
+- [create](Endpoint.md#create)
 - [generateBody](Endpoint.md#generatebody)
 - [generateParams](Endpoint.md#generateparams)
 - [generatePathParams](Endpoint.md#generatepathparams)
@@ -58,7 +59,7 @@
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:90](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L90)
+[src/Endpoint/Endpoint.ts:25](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L25)
 
 ## Properties
 
@@ -68,7 +69,7 @@
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:85](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L85)
+[src/Endpoint/Endpoint.ts:20](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L20)
 
 ___
 
@@ -78,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:87](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L87)
+[src/Endpoint/Endpoint.ts:22](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L22)
 
 ___
 
@@ -88,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:88](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L88)
+[src/Endpoint/Endpoint.ts:23](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L23)
 
 ___
 
@@ -98,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:86](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L86)
+[src/Endpoint/Endpoint.ts:21](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L21)
 
 ## Methods
 
@@ -118,7 +119,37 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:97](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L97)
+[src/Endpoint/Endpoint.ts:37](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L37)
+
+___
+
+### create
+
+▸ **create**\<`RequestType`, `ResponseType`\>(`axios`, `method`, `path`, `options`): [`Endpoint`](Endpoint.md)\<`RequestType`, `ResponseType`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `RequestType` | extends [`RequestParams`](../interfaces/RequestParams.md) |
+| `ResponseType` | `ResponseType` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `axios` | `AxiosInstance` |
+| `method` | `string` |
+| `path` | `string` |
+| `options` | [`EndpointOptions`](../interfaces/EndpointOptions.md) |
+
+#### Returns
+
+[`Endpoint`](Endpoint.md)\<`RequestType`, `ResponseType`\>
+
+#### Defined in
+
+[src/Endpoint/Endpoint.ts:11](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L11)
 
 ___
 
@@ -140,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:27](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L27)
+[src/Endpoint/Endpoint.ts:77](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L77)
 
 ___
 
@@ -168,7 +199,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:11](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L11)
+[src/Endpoint/Endpoint.ts:61](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L61)
 
 ___
 
@@ -189,7 +220,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:71](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L71)
+[src/Endpoint/Endpoint.ts:121](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L121)
 
 ___
 
@@ -210,4 +241,4 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:57](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L57)
+[src/Endpoint/Endpoint.ts:107](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Endpoint/Endpoint.ts#L107)

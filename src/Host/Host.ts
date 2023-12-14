@@ -7,32 +7,37 @@ import type { RequestParams } from '@/Request';
 import type { HostEvents, Methods } from './types';
 
 class Host {
-  readonly #events = new Events<HostEvents>();
+  static create(baseURL: string, headers?: Record<string, string | (() => string)>): Host;
+  static create(axiosInstance: AxiosInstance, headers?: Record<string, () => string>): Host;
+  static create(
+    baseURLOrAxios: string | AxiosInstance,
+    headers: Record<string, string | (() => string)>,
+  ) {
+    const { headersStatic } = Host.getHeaders(headers);
 
-  static getHeaders(headers: Record<string, string | (() => string)>) {
-    const headersEntries = Object.entries(headers);
+    if (typeof baseURLOrAxios === 'string') {
+      return new Host(axios.create({
+        baseURL: baseURLOrAxios,
+        headers: headersStatic,
+      }), headers);
+    }
 
-    const headersStatic = Object.fromEntries(
-      headersEntries.filter(([, value]) => typeof value === 'string'),
-    );
+    if (baseURLOrAxios instanceof axios) {
+      return new Host(baseURLOrAxios, headers);
+    }
 
-    const headersGetters = headersEntries.filter(([, value]) => typeof value === 'function');
-
-    return {
-      headersStatic,
-      headersGetters,
-    };
+    throw new Error(`${baseURLOrAxios} is not allowed for createHost`);
   }
+
+  readonly #events = new Events<HostEvents>();
 
   readonly #axios: AxiosInstance;
 
-  constructor(baseURL: string, headers: Record<string, string | (() => string)> = {}) {
-    const { headersStatic } = Host.getHeaders(headers);
-
-    this.#axios = axios.create({
-      baseURL,
-      headers: headersStatic,
-    });
+  private constructor(
+    axiosInstance: AxiosInstance,
+    headers: Record<string, string | (() => string)> = {},
+  ) {
+    this.#axios = axiosInstance;
 
     this.#applyHeadersGetter(headers);
     this.#setEvents();
@@ -46,7 +51,7 @@ class Host {
       responseFormat: 'json',
     },
   ): Endpoint<RequestType, ResponseType> {
-    return new Endpoint<RequestType, ResponseType>(this.#axios, method, path, options);
+    return Endpoint.create<RequestType, ResponseType>(this.#axios, method, path, options);
   }
 
   on(event: HostEvents, handler: (event: Error | Record<string, unknown>) => void) {
@@ -91,6 +96,21 @@ class Host {
         return error;
       },
     );
+  }
+
+  static getHeaders(headers: Record<string, string | (() => string)>) {
+    const headersEntries = Object.entries(headers);
+
+    const headersStatic = Object.fromEntries(
+      headersEntries.filter(([, value]) => typeof value === 'string'),
+    );
+
+    const headersGetters = headersEntries.filter(([, value]) => typeof value === 'function');
+
+    return {
+      headersStatic,
+      headersGetters,
+    };
   }
 }
 

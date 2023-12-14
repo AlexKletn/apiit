@@ -27,6 +27,7 @@
 - [getResult](Request.md#getresult)
 - [off](Request.md#off)
 - [on](Request.md#on)
+- [create](Request.md#create)
 
 ## Constructors
 
@@ -53,7 +54,7 @@
 
 #### Defined in
 
-[src/Request/Request.ts:16](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L16)
+[src/Request/Request.ts:24](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L24)
 
 ## Properties
 
@@ -63,7 +64,7 @@
 
 #### Defined in
 
-[src/Request/Request.ts:10](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L10)
+[src/Request/Request.ts:18](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L18)
 
 ___
 
@@ -73,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:14](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L14)
+[src/Request/Request.ts:22](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L22)
 
 ___
 
@@ -83,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:11](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L11)
+[src/Request/Request.ts:19](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L19)
 
 ## Methods
 
@@ -103,7 +104,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:67](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L67)
+[src/Request/Request.ts:75](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L75)
 
 ___
 
@@ -117,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:51](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L51)
+[src/Request/Request.ts:59](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L59)
 
 ___
 
@@ -131,7 +132,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:47](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L47)
+[src/Request/Request.ts:55](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L55)
 
 ___
 
@@ -152,7 +153,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:63](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L63)
+[src/Request/Request.ts:71](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L71)
 
 ___
 
@@ -179,4 +180,31 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:56](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L56)
+[src/Request/Request.ts:64](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L64)
+
+___
+
+### create
+
+▸ **create**\<`ResponseType`\>(`«destructured»`, `axios`): [`Request`](Request.md)\<`ResponseType`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `ResponseType` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | [`RequestOptions`](../interfaces/RequestOptions.md) |
+| `axios` | `AxiosInstance` |
+
+#### Returns
+
+[`Request`](Request.md)\<`ResponseType`\>
+
+#### Defined in
+
+[src/Request/Request.ts:10](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/Request.ts#L10)

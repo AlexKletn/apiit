@@ -7,13 +7,21 @@ import { ResponseParser } from '@/ResponseParser';
 import type { ProgressEvent, RequestEvents, RequestOptions } from './types';
 
 class Request<ResponseType> {
+  static create<ResponseType>({
+    method, path, payload, responseFormat,
+  }: RequestOptions, axios: AxiosInstance) {
+    return new Request<ResponseType>({
+      method, path, payload, responseFormat,
+    }, axios);
+  }
+
   readonly #controller = new AbortController();
   readonly #requestPromise: Promise<Response<ResponseType>>;
 
   // eslint-disable-next-line max-len
   readonly #events = new Events<RequestEvents>();
 
-  constructor({
+  private constructor({
     method, path, payload, responseFormat,
   }: RequestOptions, axios: AxiosInstance) {
     const emit = this.#events.emit.bind(this.#events);

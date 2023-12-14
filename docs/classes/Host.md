@@ -20,19 +20,20 @@
 - [createEndpoint](Host.md#createendpoint)
 - [off](Host.md#off)
 - [on](Host.md#on)
+- [create](Host.md#create)
 - [getHeaders](Host.md#getheaders)
 
 ## Constructors
 
 ### constructor
 
-• **new Host**(`baseURL`, `headers?`): [`Host`](Host.md)
+• **new Host**(`axiosInstance`, `headers?`): [`Host`](Host.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `baseURL` | `string` |
+| `axiosInstance` | `AxiosInstance` |
 | `headers` | `Record`\<`string`, `string` \| () => `string`\> |
 
 #### Returns
@@ -41,7 +42,7 @@
 
 #### Defined in
 
-[src/Host/Host.ts:29](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L29)
+[src/Host/Host.ts:36](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L36)
 
 ## Properties
 
@@ -51,7 +52,7 @@
 
 #### Defined in
 
-[src/Host/Host.ts:27](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L27)
+[src/Host/Host.ts:34](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L34)
 
 ___
 
@@ -61,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:10](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L10)
+[src/Host/Host.ts:32](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L32)
 
 ## Methods
 
@@ -81,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:60](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L60)
+[src/Host/Host.ts:65](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L65)
 
 ___
 
@@ -95,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:75](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L75)
+[src/Host/Host.ts:80](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L80)
 
 ___
 
@@ -124,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:41](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L41)
+[src/Host/Host.ts:46](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L46)
 
 ___
 
@@ -145,7 +146,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:56](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L56)
+[src/Host/Host.ts:61](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L61)
 
 ___
 
@@ -166,7 +167,45 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:52](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L52)
+[src/Host/Host.ts:57](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L57)
+
+___
+
+### create
+
+▸ **create**(`baseURL`, `headers?`): [`Host`](Host.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `baseURL` | `string` |
+| `headers?` | `Record`\<`string`, `string` \| () => `string`\> |
+
+#### Returns
+
+[`Host`](Host.md)
+
+#### Defined in
+
+[src/Host/Host.ts:10](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L10)
+
+▸ **create**(`axiosInstance`, `headers?`): [`Host`](Host.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `axiosInstance` | `AxiosInstance` |
+| `headers?` | `Record`\<`string`, () => `string`\> |
+
+#### Returns
+
+[`Host`](Host.md)
+
+#### Defined in
+
+[src/Host/Host.ts:11](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L11)
 
 ___
 
@@ -191,4 +230,4 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:12](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L12)
+[src/Host/Host.ts:101](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Host/Host.ts#L101)

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/Request/types.ts:9](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L9)
+[src/Request/types.ts:9](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/types.ts#L9)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:10](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L10)
+[src/Request/types.ts:10](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/types.ts#L10)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:11](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L11)
+[src/Request/types.ts:11](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/types.ts#L11)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:8](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L8)
+[src/Request/types.ts:8](https://github.com/AlexKletn/apiit/blob/21e19d0/src/Request/types.ts#L8)

@@ -1,5 +1,6 @@
 import mitt from 'mitt';
 
+// @ignore
 class EventsEmitter<Events extends string, Payloads = unknown> {
   #emitter = mitt();
 

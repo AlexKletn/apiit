@@ -8,6 +8,56 @@ import type { DataFormat, Methods } from '@/Host';
 import type { EndpointOptions, ParamsConfig } from './types';
 
 class Endpoint<RequestType extends RequestParams, ResponseType> {
+  static create<RequestType extends RequestParams, ResponseType>(
+    axios: AxiosInstance,
+    method: Methods,
+    path: string,
+    options: EndpointOptions,
+  ) {
+    return new Endpoint<RequestType, ResponseType>(axios, method, path, options);
+  }
+
+  readonly #axios: AxiosInstance;
+  readonly #path: string;
+  readonly #method: Methods;
+  readonly #options: EndpointOptions;
+
+  private constructor(
+    axios: AxiosInstance,
+    method: Methods,
+    path: string,
+    options: EndpointOptions,
+  ) {
+    this.#axios = axios;
+    this.#path = path;
+    this.#method = method;
+    this.#options = options;
+  }
+
+  request(payload?: RequestType) {
+    const {
+      dataFormat,
+      responseFormat,
+      paramsConfig,
+    } = this.#options;
+
+    const { body, query, pathParams } = Endpoint.generateParams(payload, dataFormat, paramsConfig);
+    const url = createUrl({
+      path: this.#path,
+      pathParams,
+    });
+
+    return Request.create<ResponseType>({
+      method: this.#method,
+      path: url,
+      responseFormat,
+      payload: {
+        data: body,
+        params: query,
+      },
+    }, this.#axios);
+  }
+
   static generateParams(
     payload: RequestParams = {},
     dataFormat: DataFormat = 'json',
@@ -80,42 +130,6 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     }
 
     return path;
-  }
-
-  readonly #axios: AxiosInstance;
-  readonly #path: string;
-  readonly #method: Methods;
-  readonly #options: EndpointOptions;
-
-  constructor(axios: AxiosInstance, method: Methods, path: string, options: EndpointOptions) {
-    this.#axios = axios;
-    this.#path = path;
-    this.#method = method;
-    this.#options = options;
-  }
-
-  request(payload?: RequestType) {
-    const {
-      dataFormat,
-      responseFormat,
-      paramsConfig,
-    } = this.#options;
-
-    const { body, query, pathParams } = Endpoint.generateParams(payload, dataFormat, paramsConfig);
-    const url = createUrl({
-      path: this.#path,
-      pathParams,
-    });
-
-    return new Request<ResponseType>({
-      method: this.#method,
-      path: url,
-      responseFormat,
-      payload: {
-        data: body,
-        params: query,
-      },
-    }, this.#axios);
   }
 }
 

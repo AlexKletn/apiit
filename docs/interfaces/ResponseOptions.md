@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/ResponseParser/types.ts:2](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/types.ts#L2)
+[src/ResponseParser/types.ts:2](https://github.com/AlexKletn/apiit/blob/21e19d0/src/ResponseParser/types.ts#L2)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/ResponseParser/types.ts:3](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/types.ts#L3)
+[src/ResponseParser/types.ts:3](https://github.com/AlexKletn/apiit/blob/21e19d0/src/ResponseParser/types.ts#L3)
