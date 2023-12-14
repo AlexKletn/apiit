@@ -37,10 +37,10 @@ class Request<ResponseType> {
       },
     })
       .then((res) => this.#responseReturn(res))
-      .catch((err) => {
+      .catch((err: Error) => {
         this.#events.emit('error', err);
 
-        throw err;
+        return { error: err };
       });
   }
 

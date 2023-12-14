@@ -1,11 +1,17 @@
 export interface ResponseOptions<ResponseType> {
   data: ResponseType
   headers: {
-    [key: string]: any
+    [key: string]: unknown
   }
 }
 
-export interface Response<ResponseType> extends ResponseOptions<ResponseType> {
-  contentType: string,
-  fileName: string,
+interface ResponseFailed {
+  error?: Error
 }
+
+interface ResponseSuccessful<ResponseType> extends ResponseOptions<ResponseType> {
+  contentType?: string,
+  fileName?: string,
+}
+
+export type Response<ResponseType> = ResponseFailed | ResponseSuccessful<ResponseType>;
