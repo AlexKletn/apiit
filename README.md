@@ -5,6 +5,12 @@ Apiit
 
 [Api docs](docs/modules.md)
 
+Install
+---
+```shell
+npm i apiit
+```
+
 Features
 ---
 * Defining an endpoint as a reusable function
