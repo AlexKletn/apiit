@@ -18,6 +18,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: npm publish
+      - uses: mmarchini-oss/npm-otp-publish@v0.16.0
+        with:
+          npm_token: ${{ secrets.npm_token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_actor: ${{ github.actor }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
