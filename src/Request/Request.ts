@@ -1,7 +1,7 @@
 import { AxiosInstance } from 'axios';
 
 import { Events } from '@/EventsEmitter';
-import type { Response, ResponseOptions } from '@/ResponseParser';
+import type { Response, ResponseOptions, ResponseSuccessful } from '@/ResponseParser';
 import { ResponseParser } from '@/ResponseParser';
 
 import type { ProgressEvent, RequestEvents, RequestOptions } from './types';
@@ -36,7 +36,7 @@ class Request<ResponseType> {
         emit('progress', e);
       },
     })
-      .then((res) => this.#responseReturn(res))
+      .then((res) => this.#responseReturn(res as ResponseSuccessful<ResponseType>))
       .catch((err: Error) => {
         this.#events.emit('error', err);
 

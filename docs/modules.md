@@ -1,6 +1,6 @@
-[repository](README.md) / Exports
+[apiit](README.md) / Exports
 
-# repository
+# apiit
 
 ## Table of contents
 
@@ -18,8 +18,9 @@
 - [ProgressEvent](interfaces/ProgressEvent.md)
 - [RequestOptions](interfaces/RequestOptions.md)
 - [RequestParams](interfaces/RequestParams.md)
-- [Response](interfaces/Response.md)
+- [ResponseFailed](interfaces/ResponseFailed.md)
 - [ResponseOptions](interfaces/ResponseOptions.md)
+- [ResponseSuccessful](interfaces/ResponseSuccessful.md)
 
 ### Type Aliases
 
@@ -27,6 +28,7 @@
 - [HostEvents](modules.md#hostevents)
 - [Methods](modules.md#methods)
 - [RequestEvents](modules.md#requestevents)
+- [Response](modules.md#response)
 - [ResponseFormat](modules.md#responseformat)
 
 ### Functions
@@ -41,7 +43,7 @@
 
 #### Defined in
 
-[src/Host/types.ts:2](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/types.ts#L2)
+[src/Host/types.ts:2](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/types.ts#L2)
 
 ___
 
@@ -51,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/Host/types.ts:5](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/types.ts#L5)
+[src/Host/types.ts:5](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/types.ts#L5)
 
 ___
 
@@ -61,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/Host/types.ts:1](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/types.ts#L1)
+[src/Host/types.ts:1](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/types.ts#L1)
 
 ___
 
@@ -71,7 +73,23 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:28](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L28)
+[src/Request/types.ts:28](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L28)
+
+___
+
+### Response
+
+Ƭ **Response**\<`ResponseType`\>: [`ResponseFailed`](interfaces/ResponseFailed.md) \| [`ResponseSuccessful`](interfaces/ResponseSuccessful.md)\<`ResponseType`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `ResponseType` |
+
+#### Defined in
+
+[src/ResponseParser/types.ts:17](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/types.ts#L17)
 
 ___
 
@@ -81,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/Host/types.ts:3](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/types.ts#L3)
+[src/Host/types.ts:3](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/types.ts#L3)
 
 ## Functions
 
@@ -102,4 +120,4 @@ ___
 
 #### Defined in
 
-[src/Repository.ts:3](https://github.com/AlexKletn/repository/blob/a5dab62/src/Repository.ts#L3)
+[src/Repository.ts:3](https://github.com/AlexKletn/apiit/blob/859f377/src/Repository.ts#L3)

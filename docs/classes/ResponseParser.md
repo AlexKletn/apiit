@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / ResponseParser
+[apiit](../README.md) / [Exports](../modules.md) / ResponseParser
 
 # Class: ResponseParser
 
@@ -26,7 +26,7 @@
 
 ### parse
 
-▸ **parse**\<`ResponseType`\>(`«destructured»`): [`Response`](../interfaces/Response.md)\<`ResponseType`\>
+▸ **parse**\<`ResponseType`\>(`«destructured»`): [`ResponseSuccessful`](../interfaces/ResponseSuccessful.md)\<`ResponseType`\>
 
 #### Type parameters
 
@@ -42,8 +42,8 @@
 
 #### Returns
 
-[`Response`](../interfaces/Response.md)\<`ResponseType`\>
+[`ResponseSuccessful`](../interfaces/ResponseSuccessful.md)\<`ResponseType`\>
 
 #### Defined in
 
-[src/ResponseParser/ResponseParser.ts:4](https://github.com/AlexKletn/repository/blob/a5dab62/src/ResponseParser/ResponseParser.ts#L4)
+[src/ResponseParser/ResponseParser.ts:4](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/ResponseParser.ts#L4)

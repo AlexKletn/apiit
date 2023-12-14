@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / Request
+[apiit](../README.md) / [Exports](../modules.md) / Request
 
 # Class: Request\<ResponseType\>
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[src/Request/Request.ts:16](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L16)
+[src/Request/Request.ts:16](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L16)
 
 ## Properties
 
@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[src/Request/Request.ts:10](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L10)
+[src/Request/Request.ts:10](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L10)
 
 ___
 
@@ -73,23 +73,23 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:14](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L14)
+[src/Request/Request.ts:14](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L14)
 
 ___
 
 ### #requestPromise
 
-• `Private` `Readonly` **#requestPromise**: `Promise`\<[`Response`](../interfaces/Response.md)\<`ResponseType`\>\>
+• `Private` `Readonly` **#requestPromise**: `Promise`\<[`Response`](../modules.md#response)\<`ResponseType`\>\>
 
 #### Defined in
 
-[src/Request/Request.ts:11](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L11)
+[src/Request/Request.ts:11](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L11)
 
 ## Methods
 
 ### #responseReturn
 
-▸ **#responseReturn**(`options`): [`Response`](../interfaces/Response.md)\<`ResponseType`\>
+▸ **#responseReturn**(`options`): [`ResponseSuccessful`](../interfaces/ResponseSuccessful.md)\<`ResponseType`\>
 
 #### Parameters
 
@@ -99,11 +99,11 @@ ___
 
 #### Returns
 
-[`Response`](../interfaces/Response.md)\<`ResponseType`\>
+[`ResponseSuccessful`](../interfaces/ResponseSuccessful.md)\<`ResponseType`\>
 
 #### Defined in
 
-[src/Request/Request.ts:67](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L67)
+[src/Request/Request.ts:67](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L67)
 
 ___
 
@@ -117,21 +117,21 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:51](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L51)
+[src/Request/Request.ts:51](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L51)
 
 ___
 
 ### getResult
 
-▸ **getResult**(): `Promise`\<[`Response`](../interfaces/Response.md)\<`ResponseType`\>\>
+▸ **getResult**(): `Promise`\<[`Response`](../modules.md#response)\<`ResponseType`\>\>
 
 #### Returns
 
-`Promise`\<[`Response`](../interfaces/Response.md)\<`ResponseType`\>\>
+`Promise`\<[`Response`](../modules.md#response)\<`ResponseType`\>\>
 
 #### Defined in
 
-[src/Request/Request.ts:47](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L47)
+[src/Request/Request.ts:47](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L47)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:63](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L63)
+[src/Request/Request.ts:63](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L63)
 
 ___
 
@@ -179,4 +179,4 @@ ___
 
 #### Defined in
 
-[src/Request/Request.ts:56](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/Request.ts#L56)
+[src/Request/Request.ts:56](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/Request.ts#L56)

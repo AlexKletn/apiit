@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / Endpoint
+[apiit](../README.md) / [Exports](../modules.md) / Endpoint
 
 # Class: Endpoint\<RequestType, ResponseType\>
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:90](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L90)
+[src/Endpoint/Endpoint.ts:90](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L90)
 
 ## Properties
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:85](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L85)
+[src/Endpoint/Endpoint.ts:85](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L85)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:87](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L87)
+[src/Endpoint/Endpoint.ts:87](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L87)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:88](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L88)
+[src/Endpoint/Endpoint.ts:88](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L88)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:86](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L86)
+[src/Endpoint/Endpoint.ts:86](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L86)
 
 ## Methods
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:97](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L97)
+[src/Endpoint/Endpoint.ts:97](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L97)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:27](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L27)
+[src/Endpoint/Endpoint.ts:27](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L27)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:11](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L11)
+[src/Endpoint/Endpoint.ts:11](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L11)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:71](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L71)
+[src/Endpoint/Endpoint.ts:71](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L71)
 
 ___
 
@@ -210,4 +210,4 @@ ___
 
 #### Defined in
 
-[src/Endpoint/Endpoint.ts:57](https://github.com/AlexKletn/repository/blob/a5dab62/src/Endpoint/Endpoint.ts#L57)
+[src/Endpoint/Endpoint.ts:57](https://github.com/AlexKletn/apiit/blob/859f377/src/Endpoint/Endpoint.ts#L57)

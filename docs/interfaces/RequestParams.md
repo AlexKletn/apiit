@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / RequestParams
+[apiit](../README.md) / [Exports](../modules.md) / RequestParams
 
 # Interface: RequestParams
 

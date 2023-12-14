@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / ResponseOptions
+[apiit](../README.md) / [Exports](../modules.md) / ResponseOptions
 
 # Interface: ResponseOptions\<ResponseType\>
 
@@ -12,7 +12,7 @@
 
 - **`ResponseOptions`**
 
-  ↳ [`Response`](Response.md)
+  ↳ [`ResponseSuccessful`](ResponseSuccessful.md)
 
 ## Table of contents
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/ResponseParser/types.ts:2](https://github.com/AlexKletn/repository/blob/a5dab62/src/ResponseParser/types.ts#L2)
+[src/ResponseParser/types.ts:2](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/types.ts#L2)
 
 ___
 
@@ -39,8 +39,8 @@ ___
 
 #### Index signature
 
-▪ [key: `string`]: `any`
+▪ [key: `string`]: `string` \| `number`
 
 #### Defined in
 
-[src/ResponseParser/types.ts:3](https://github.com/AlexKletn/repository/blob/a5dab62/src/ResponseParser/types.ts#L3)
+[src/ResponseParser/types.ts:3](https://github.com/AlexKletn/apiit/blob/859f377/src/ResponseParser/types.ts#L3)

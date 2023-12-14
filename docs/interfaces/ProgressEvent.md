@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / ProgressEvent
+[apiit](../README.md) / [Exports](../modules.md) / ProgressEvent
 
 # Interface: ProgressEvent
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/Request/types.ts:21](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L21)
+[src/Request/types.ts:21](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L21)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:25](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L25)
+[src/Request/types.ts:25](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L25)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:23](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L23)
+[src/Request/types.ts:23](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L23)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:18](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L18)
+[src/Request/types.ts:18](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L18)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:20](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L20)
+[src/Request/types.ts:20](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L20)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:22](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L22)
+[src/Request/types.ts:22](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L22)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:19](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L19)
+[src/Request/types.ts:19](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L19)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[src/Request/types.ts:24](https://github.com/AlexKletn/repository/blob/a5dab62/src/Request/types.ts#L24)
+[src/Request/types.ts:24](https://github.com/AlexKletn/apiit/blob/859f377/src/Request/types.ts#L24)

@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / ParamsConfig
+[apiit](../README.md) / [Exports](../modules.md) / ParamsConfig
 
 # Interface: ParamsConfig
 

@@ -1,4 +1,4 @@
-[repository](../README.md) / [Exports](../modules.md) / Host
+[apiit](../README.md) / [Exports](../modules.md) / Host
 
 # Class: Host
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[src/Host/Host.ts:29](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L29)
+[src/Host/Host.ts:29](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L29)
 
 ## Properties
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[src/Host/Host.ts:27](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L27)
+[src/Host/Host.ts:27](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L27)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:10](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L10)
+[src/Host/Host.ts:10](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L10)
 
 ## Methods
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:60](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L60)
+[src/Host/Host.ts:60](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L60)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:75](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L75)
+[src/Host/Host.ts:75](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L75)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:41](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L41)
+[src/Host/Host.ts:41](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L41)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:56](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L56)
+[src/Host/Host.ts:56](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L56)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:52](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L52)
+[src/Host/Host.ts:52](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L52)
 
 ___
 
@@ -191,4 +191,4 @@ ___
 
 #### Defined in
 
-[src/Host/Host.ts:12](https://github.com/AlexKletn/repository/blob/a5dab62/src/Host/Host.ts#L12)
+[src/Host/Host.ts:12](https://github.com/AlexKletn/apiit/blob/859f377/src/Host/Host.ts#L12)

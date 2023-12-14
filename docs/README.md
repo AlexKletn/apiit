@@ -1,9 +1,17 @@
-Apiit / [Exports](modules.md)
+apiit / [Exports](modules.md)
 
 Apiit 
 ---
 
 *Library for creating an organized API layer*
+
+[Api docs](docs/modules.md)
+
+Install
+---
+```shell
+npm i apiit
+```
 
 Features
 ---
