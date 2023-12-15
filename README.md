@@ -101,6 +101,21 @@ Usage
       }
     })
     ``` 
+  *
+    ```typescript 
+    type RequestPayload = {
+      file: File;
+    }
+  
+    host.createEndpoint<RequestPayload, void>('post', '/foo', {
+      dataFormat: 'form-data',
+      paramsConfig: {
+        file: {
+          in: "body"
+        }
+      }
+    })
+    ``` 
 * Endpoint Request
   * ```typescript
     const endpoint = host.createEndpoint<RequestPayload, ResponseData>('get', '/foo', {
