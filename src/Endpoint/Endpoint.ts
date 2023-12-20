@@ -1,5 +1,5 @@
 import { createUrl } from 'url-fns';
-import { AxiosInstance } from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
 import type { RequestParams } from '@/Request';
 import { Request } from '@/Request';
@@ -9,12 +9,12 @@ import type { EndpointOptions, ParamsConfig } from './types';
 
 class Endpoint<RequestType extends RequestParams, ResponseType> {
   static create<RequestType extends RequestParams, ResponseType>(
-    axios: AxiosInstance,
     method: Methods,
     path: string,
     options: EndpointOptions,
+    axiosInstance?: AxiosInstance,
   ) {
-    return new Endpoint<RequestType, ResponseType>(axios, method, path, options);
+    return new Endpoint<RequestType, ResponseType>(method, path, options, axiosInstance);
   }
 
   readonly #axios: AxiosInstance;
@@ -23,12 +23,12 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
   readonly #options: EndpointOptions;
 
   private constructor(
-    axios: AxiosInstance,
     method: Methods,
     path: string,
     options: EndpointOptions,
+    axiosInstance?: AxiosInstance,
   ) {
-    this.#axios = axios;
+    this.#axios = axiosInstance ?? axios.create();
     this.#path = path;
     this.#method = method;
     this.#options = options;

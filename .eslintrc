@@ -10,5 +10,8 @@
       { "exceptAfterSingleLine": true }
     ],
     "import/prefer-default-export": "off"
-  }
+  },
+  "ignorePatterns": [
+    "jest.config.js"
+  ]
 }
