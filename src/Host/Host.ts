@@ -5,15 +5,16 @@ import type { EndpointOptions } from '@/Endpoint/types';
 import type { RequestParams } from '@/Request';
 
 import type { HostEvents, Methods } from './types';
+import { Headers } from './types';
 
 class Host {
-  static create(baseURL: string, headers?: Record<string, string | (() => string)>): Host;
-  static create(axiosInstance: AxiosInstance, headers?: Record<string, () => string>): Host;
+  static create(baseURL: string, headers?: Headers): Host;
+  static create(axiosInstance: AxiosInstance, headers?: Headers): Host;
   static create(
     baseURLOrAxios: string | AxiosInstance,
-    headers: Record<string, string | (() => string)>,
+    headers: Headers,
   ) {
-    const { headersStatic } = Host.getHeaders(headers);
+    const { headersStatic } = Host.parseHeaders(headers);
 
     if (typeof baseURLOrAxios === 'string') {
       return new Host(axios.create({
@@ -35,7 +36,7 @@ class Host {
 
   private constructor(
     axiosInstance: AxiosInstance,
-    headers: Record<string, string | (() => string)> = {},
+    headers: Headers,
   ) {
     this.#axios = axiosInstance;
 
@@ -51,7 +52,7 @@ class Host {
       responseFormat: 'json',
     },
   ): Endpoint<RequestType, ResponseType> {
-    return Endpoint.create<RequestType, ResponseType>(this.#axios, method, path, options);
+    return Endpoint.create<RequestType, ResponseType>(method, path, options, this.#axios);
   }
 
   on(event: HostEvents, handler: (event: Error | Record<string, unknown>) => void) {
@@ -62,8 +63,8 @@ class Host {
     this.#events.off(event, handler);
   }
 
-  #applyHeadersGetter(headers: Record<string, string | (() => string)>) {
-    const { headersGetters } = Host.getHeaders(headers);
+  #applyHeadersGetter(headers: Headers) {
+    const { headersGetters } = Host.parseHeaders(headers);
 
     this.#axios.interceptors.request.use((config) => {
       for (let i = 0; i < headersGetters.length; i += 1) {
@@ -98,7 +99,7 @@ class Host {
     );
   }
 
-  static getHeaders(headers: Record<string, string | (() => string)>) {
+  static parseHeaders(headers: Headers) {
     const headersEntries = Object.entries(headers);
 
     const headersStatic = Object.fromEntries(

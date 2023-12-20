@@ -1,8 +1,6 @@
 import { Methods, ResponseFormat } from '@/Host/types';
 
-export interface RequestParams {
-  [key: string]: unknown
-}
+export type RequestParams = Record<string, unknown>;
 
 export interface RequestOptions {
   responseFormat: ResponseFormat;
