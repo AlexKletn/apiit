@@ -5,13 +5,7 @@ export interface ResponseOptions<ResponseType> {
   }
 }
 
-export interface ResponseFailed {
-  error?: Error
-}
-
 export interface ResponseSuccessful<ResponseType> extends ResponseOptions<ResponseType> {
   contentType?: string,
   fileName?: string,
 }
-
-export type Response<ResponseType> = ResponseFailed | ResponseSuccessful<ResponseType>;

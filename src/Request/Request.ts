@@ -1,10 +1,12 @@
-import { AxiosInstance } from 'axios';
+import { AxiosError, AxiosInstance } from 'axios';
 
 import { Events } from '@/EventsEmitter';
-import type { Response, ResponseOptions, ResponseSuccessful } from '@/ResponseParser';
+import type { ResponseOptions, ResponseSuccessful } from '@/ResponseParser';
 import { ResponseParser } from '@/ResponseParser';
 
 import type { ProgressEvent, RequestEvents, RequestOptions } from './types';
+import RequestFailedException from '@/Request/Exceptions/RequestFailedException';
+import { Headers } from '@/Host';
 
 class Request<ResponseType> {
   static create<ResponseType>({
@@ -16,7 +18,7 @@ class Request<ResponseType> {
   }
 
   readonly #controller = new AbortController();
-  readonly #requestPromise: Promise<Response<ResponseType>>;
+  readonly #requestPromise: Promise<ResponseSuccessful<ResponseType>>;
 
   // eslint-disable-next-line max-len
   readonly #events = new Events<RequestEvents>();
@@ -45,10 +47,22 @@ class Request<ResponseType> {
       },
     })
       .then((res) => this.#responseReturn(res as ResponseSuccessful<ResponseType>))
-      .catch((err: Error) => {
+      .catch((err: AxiosError) => {
         this.#events.emit('error', err);
 
-        return { error: err };
+        throw new RequestFailedException({
+          code: err.response.status,
+          data: err.response.data,
+
+          response: {
+            headers: err.response.headers as unknown as Headers,
+          },
+          request: {
+            headers: err.request.headers as unknown as Headers,
+            method,
+            path,
+          },
+        });
       });
   }
 
