@@ -36,7 +36,7 @@ class Host {
 
   private constructor(
     axiosInstance: AxiosInstance,
-    headers: Headers,
+    headers: Headers = {},
   ) {
     this.#axios = axiosInstance;
 
