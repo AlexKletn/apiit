@@ -16,6 +16,7 @@
     "type": "git",
     "url": "https://github.com/AlexKletn/apiit.git"
   },
+  "homepage": "https://apiit.obscur.space",
   "scripts": {
     "build": "tsc && resolve-tspaths",
     "build:watch": "tsc -w"
