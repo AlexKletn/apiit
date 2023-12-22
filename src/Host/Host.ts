@@ -12,7 +12,7 @@ class Host {
   static create(axiosInstance: AxiosInstance, headers?: Headers): Host;
   static create(
     baseURLOrAxios: string | AxiosInstance,
-    headers: Headers,
+    headers: Headers = {},
   ) {
     const { headersStatic } = Host.parseHeaders(headers);
 

@@ -25,7 +25,10 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
   private constructor(
     method: Methods,
     path: string,
-    options: EndpointOptions,
+    options: EndpointOptions = {
+      dataFormat: 'json',
+      responseFormat: 'json',
+    },
     axiosInstance?: AxiosInstance,
   ) {
     this.#axios = axiosInstance ?? axios.create();
