@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/AlexKletn/apiit/compare/v1.0.0...v1.0.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* host create signature ([911ad10](https://github.com/AlexKletn/apiit/commit/911ad10f36caa02dad1b5da8a49198e8678fda0e))
+
 # 1.0.0 (2023-12-21)
 
 
