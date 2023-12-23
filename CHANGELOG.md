@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/AlexKletn/apiit/compare/v1.0.1...v1.0.2) (2023-12-23)
+
+
+### Bug Fixes
+
+* depends fix ([a995f02](https://github.com/AlexKletn/apiit/commit/a995f0219c88f324e32961af931fd3b975e5f35e))
+* errors after tests ([bf2f1c6](https://github.com/AlexKletn/apiit/commit/bf2f1c6b6ec59d2302224df11306fbdf2eefbe0c))
+
 ## [1.0.1](https://github.com/AlexKletn/apiit/compare/v1.0.0...v1.0.1) (2023-12-22)
 
 
