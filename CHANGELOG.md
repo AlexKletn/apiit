@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/AlexKletn/apiit/compare/v1.0.2...v1.1.0) (2023-12-23)
+
+
+### Features
+
+* headers in endpoint and request ([ef04365](https://github.com/AlexKletn/apiit/commit/ef04365815040bc9642361c7317f42285ba7bdc8))
+
 ## [1.0.2](https://github.com/AlexKletn/apiit/compare/v1.0.1...v1.0.2) (2023-12-23)
 
 
