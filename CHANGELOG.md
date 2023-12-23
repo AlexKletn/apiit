@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AlexKletn/apiit/compare/v1.1.0...v1.1.1) (2023-12-23)
+
+
+### Bug Fixes
+
+* exclude tests from build ([bd52bde](https://github.com/AlexKletn/apiit/commit/bd52bdee5509bb4b0c5e9b3faeae81d11fff21e4))
+
 # [1.1.0](https://github.com/AlexKletn/apiit/compare/v1.0.2...v1.1.0) (2023-12-23)
 
 
