@@ -9,12 +9,8 @@ import RequestFailedException from '@/Request/Exceptions/RequestFailedException'
 import { Headers } from '@/Host';
 
 class Request<ResponseType> {
-  static create<ResponseType>({
-    method, path, payload, responseFormat = 'json',
-  }: RequestOptions, axios?: AxiosInstance) {
-    return new Request<ResponseType>({
-      method, path, payload, responseFormat,
-    }, axios);
+  static create<ResponseType>(options: RequestOptions, axios?: AxiosInstance) {
+    return new Request<ResponseType>(options, axios);
   }
 
   readonly #controller = new AbortController();
@@ -23,7 +19,7 @@ class Request<ResponseType> {
   readonly #events = new Events<RequestEvents>();
 
   private constructor({
-    method, path, payload = {}, responseFormat = 'json',
+    method, path, payload = {}, responseFormat = 'json', headers,
   }: RequestOptions, axios: AxiosInstance) {
     const emit = this.#events.emit.bind(this.#events);
 
@@ -33,6 +29,7 @@ class Request<ResponseType> {
       url: path,
       responseType: responseFormat,
       signal: this.#controller.signal,
+      headers,
 
       ...payload,
 
