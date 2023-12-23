@@ -19,7 +19,8 @@
   "homepage": "https://apiit.obscur.space",
   "scripts": {
     "build": "tsc && resolve-tspaths",
-    "build:watch": "tsc -w"
+    "build:watch": "tsc -w",
+    "build:docs": "typedoc && typedoc-json-parser --json ./docs/api.json"
   },
   "files": [
     "lib"
