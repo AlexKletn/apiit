@@ -1,8 +1,8 @@
-import mitt from 'mitt';
+import mitt, { Emitter } from 'mitt';
 
 // @ignore
 class EventsEmitter<Events extends string, Payloads = unknown> {
-  #emitter = mitt();
+  #emitter: Emitter<Record<Events, Payloads>> = mitt();
 
   on(event: Events, handler: (event: Payloads) => void) {
     this.#emitter.on(event, handler);

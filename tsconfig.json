@@ -11,6 +11,7 @@
     "baseUrl": "./src",
     "declaration": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "paths": {
       "@/*": [
         "./*"

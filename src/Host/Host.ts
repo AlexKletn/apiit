@@ -14,17 +14,17 @@ class Host {
     baseURLOrAxios: string | AxiosInstance,
     headers: Headers = {},
   ) {
-    const { headersStatic } = Host.parseHeaders(headers);
+    const { headersStatic, headersGetters } = Host.parseHeaders(headers);
 
     if (typeof baseURLOrAxios === 'string') {
       return new Host(axios.create({
         baseURL: baseURLOrAxios,
         headers: headersStatic,
-      }), headers);
+      }), headersGetters);
     }
 
-    if (baseURLOrAxios instanceof axios) {
-      return new Host(baseURLOrAxios, headers);
+    if (baseURLOrAxios.interceptors) {
+      return new Host(baseURLOrAxios, headersGetters);
     }
 
     throw new Error(`${baseURLOrAxios} is not allowed for createHost`);
@@ -64,7 +64,7 @@ class Host {
   }
 
   #applyHeadersGetter(headers: Headers) {
-    const { headersGetters } = Host.parseHeaders(headers);
+    const headersGetters = Object.entries(Host.parseHeaders(headers).headersGetters);
 
     this.#axios.interceptors.request.use((config) => {
       for (let i = 0; i < headersGetters.length; i += 1) {
@@ -79,11 +79,18 @@ class Host {
   }
 
   #setEvents() {
-    this.#axios.interceptors.request.use((config) => {
-      this.#events.emit('request', config);
+    this.#axios.interceptors.request.use(
+      (config) => {
+        this.#events.emit('request', config);
 
-      return config;
-    });
+        return config;
+      },
+      (error) => {
+        this.#events.emit('error', error);
+
+        return error;
+      },
+    );
 
     this.#axios.interceptors.response.use(
       (response) => {
@@ -106,7 +113,9 @@ class Host {
       headersEntries.filter(([, value]) => typeof value === 'string'),
     );
 
-    const headersGetters = headersEntries.filter(([, value]) => typeof value === 'function');
+    const headersGetters = Object.fromEntries(
+      headersEntries.filter(([, value]) => typeof value === 'function'),
+    );
 
     return {
       headersStatic,

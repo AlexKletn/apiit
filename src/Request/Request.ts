@@ -10,8 +10,8 @@ import { Headers } from '@/Host';
 
 class Request<ResponseType> {
   static create<ResponseType>({
-    method, path, payload, responseFormat,
-  }: RequestOptions, axios: AxiosInstance) {
+    method, path, payload, responseFormat = 'json',
+  }: RequestOptions, axios?: AxiosInstance) {
     return new Request<ResponseType>({
       method, path, payload, responseFormat,
     }, axios);
@@ -20,11 +20,10 @@ class Request<ResponseType> {
   readonly #controller = new AbortController();
   readonly #requestPromise: Promise<ResponseSuccessful<ResponseType>>;
 
-  // eslint-disable-next-line max-len
   readonly #events = new Events<RequestEvents>();
 
   private constructor({
-    method, path, payload, responseFormat,
+    method, path, payload = {}, responseFormat = 'json',
   }: RequestOptions, axios: AxiosInstance) {
     const emit = this.#events.emit.bind(this.#events);
 
@@ -51,11 +50,12 @@ class Request<ResponseType> {
         this.#events.emit('error', err);
 
         throw new RequestFailedException({
-          code: err.response.status,
-          data: err.response.data,
+          status: err.response?.status,
+          data: err.response?.data,
+          code: err.code,
 
           response: {
-            headers: err.response.headers as unknown as Headers,
+            headers: err.response?.headers as unknown as Headers,
           },
           request: {
             headers: err.request.headers as unknown as Headers,
@@ -66,7 +66,7 @@ class Request<ResponseType> {
       });
   }
 
-  async getResult() {
+  getResult() {
     return this.#requestPromise;
   }
 
