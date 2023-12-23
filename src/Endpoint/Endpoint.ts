@@ -4,14 +4,20 @@ import axios, { AxiosInstance } from 'axios';
 import type { RequestParams } from '@/Request';
 import { Request } from '@/Request';
 
-import type { DataFormat, Methods } from '@/Host';
-import type { EndpointOptions, ParamsConfig } from './types';
+import type { Methods } from '@/Host';
+import type { EndpointOptions } from './types';
+
+const optionsDefaults: EndpointOptions = {
+  dataFormat: 'json',
+  responseFormat: 'json',
+  paramsConfig: {},
+};
 
 class Endpoint<RequestType extends RequestParams, ResponseType> {
   static create<RequestType extends RequestParams, ResponseType>(
     method: Methods,
     path: string,
-    options: EndpointOptions,
+    options?: EndpointOptions,
     axiosInstance?: AxiosInstance,
   ) {
     return new Endpoint<RequestType, ResponseType>(method, path, options, axiosInstance);
@@ -25,26 +31,21 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
   private constructor(
     method: Methods,
     path: string,
-    options: EndpointOptions = {
-      dataFormat: 'json',
-      responseFormat: 'json',
-    },
+    options?: EndpointOptions,
     axiosInstance?: AxiosInstance,
   ) {
     this.#axios = axiosInstance ?? axios.create();
     this.#path = path;
     this.#method = method;
-    this.#options = options;
+    this.#options = { ...optionsDefaults, ...options };
   }
 
-  request(payload?: RequestType) {
+  request(payload: RequestType = {} as RequestType) {
     const {
-      dataFormat,
       responseFormat,
-      paramsConfig,
     } = this.#options;
 
-    const { body, query, pathParams } = Endpoint.generateParams(payload, dataFormat, paramsConfig);
+    const { body, query, pathParams } = this.#generateParams(payload);
     const url = createUrl({
       path: this.#path,
       pathParams,
@@ -61,14 +62,11 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     }, this.#axios);
   }
 
-  static generateParams(
-    payload: RequestParams = {},
-    dataFormat: DataFormat = 'json',
-    paramsConfig: ParamsConfig = {},
-  ) {
-    const body = Endpoint.generateBody(payload, paramsConfig, dataFormat);
-    const query = Endpoint.generateQuery(payload, paramsConfig);
-    const pathParams = Endpoint.generatePathParams(payload, paramsConfig);
+  /* istanbul ignore next */
+  #generateParams(payload: RequestParams) {
+    const body = this.#generateBody(payload);
+    const query = this.#generateQuery(payload);
+    const pathParams = this.#generatePathParams(payload);
 
     return {
       body,
@@ -77,7 +75,13 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     };
   }
 
-  static generateBody(payload: RequestParams, paramsConfig: ParamsConfig, dataFormat: DataFormat = 'json') {
+  /* istanbul ignore next */
+  #generateBody(payload: RequestParams) {
+    const {
+      dataFormat,
+      paramsConfig,
+    } = this.#options;
+
     if (dataFormat === 'string') {
       return payload.body as string;
     }
@@ -107,7 +111,12 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     return body;
   }
 
-  static generateQuery(payload: RequestParams, paramsConfig: ParamsConfig) {
+  /* istanbul ignore next */
+  #generateQuery(payload: RequestParams) {
+    const {
+      paramsConfig,
+    } = this.#options;
+
     const query = {};
     const queryParamsKeys = Object.entries(paramsConfig)
       .filter(([, config]) => config.in === 'query')
@@ -121,7 +130,11 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     return query;
   }
 
-  static generatePathParams(payload: RequestParams, paramsConfig: ParamsConfig) {
+  #generatePathParams(payload: RequestParams) {
+    const {
+      paramsConfig,
+    } = this.#options;
+
     const path = {};
     const pathParamsKeys = Object.entries(paramsConfig)
       .filter(([, config]) => config.in === 'path')

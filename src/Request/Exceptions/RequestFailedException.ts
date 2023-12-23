@@ -1,8 +1,10 @@
 import { Headers, Methods } from '@/Host';
 
 interface RequestFailedExceptionOptions {
-  code: number;
+  status: number;
   data: unknown;
+  code: string;
+  isCanceled?: boolean;
 
   response: {
     headers: Headers;
@@ -16,7 +18,8 @@ interface RequestFailedExceptionOptions {
 }
 
 class RequestFailedException extends Error {
-  code: number;
+  status: number;
+  code: string;
   data: unknown;
   response: {
     headers: Headers;
@@ -29,14 +32,19 @@ class RequestFailedException extends Error {
   };
 
   constructor({
-    code, data, response, request,
+    status, data, response, request, code,
   }: RequestFailedExceptionOptions) {
-    super(`Request error with code ${code}`);
+    super(`Request error with code ${status}`);
 
+    this.status = status;
     this.code = code;
     this.data = data;
     this.response = response;
     this.request = request;
+  }
+
+  get isCanceled() {
+    return this.code === 'ERR_CANCELED';
   }
 }
 
