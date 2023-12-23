@@ -4,7 +4,9 @@ import { Endpoint } from '@/Endpoint';
 import type { EndpointOptions } from '@/Endpoint/types';
 import type { RequestParams } from '@/Request';
 
-import type { HostEvents, Methods } from './types';
+import type {
+  HeaderGetter, HeaderStatic, HostEvents, Methods,
+} from './types';
 import { Headers } from './types';
 
 class Host {
@@ -34,25 +36,39 @@ class Host {
 
   readonly #axios: AxiosInstance;
 
+  readonly #headers: Headers;
+
   private constructor(
     axiosInstance: AxiosInstance,
     headers: Headers = {},
   ) {
     this.#axios = axiosInstance;
+    this.#headers = headers;
 
-    this.#applyHeadersGetter(headers);
+    this.#applyHeadersGetter();
     this.#setEvents();
   }
 
   createEndpoint<RequestType extends RequestParams, ResponseType>(
     method: Methods,
     path: string,
-    options: EndpointOptions = {
+    { headers, ...options }: EndpointOptions = {
       dataFormat: 'json',
       responseFormat: 'json',
+      headers: {},
     },
   ): Endpoint<RequestType, ResponseType> {
-    return Endpoint.create<RequestType, ResponseType>(method, path, options, this.#axios);
+    const preparedHeaders = {
+      ...Host.parseHeaders(this.#headers).headersStatic,
+      ...headers,
+    } as Record<string, HeaderStatic>;
+
+    return Endpoint.create<RequestType, ResponseType>(
+      method,
+      path,
+      { headers: preparedHeaders, ...options },
+      this.#axios,
+    );
   }
 
   on(event: HostEvents, handler: (event: Error | Record<string, unknown>) => void) {
@@ -63,15 +79,15 @@ class Host {
     this.#events.off(event, handler);
   }
 
-  #applyHeadersGetter(headers: Headers) {
-    const headersGetters = Object.entries(Host.parseHeaders(headers).headersGetters);
+  #applyHeadersGetter() {
+    const headersGetters = Object.entries(Host.parseHeaders(this.#headers).headersGetters);
 
     this.#axios.interceptors.request.use((config) => {
       for (let i = 0; i < headersGetters.length; i += 1) {
         const header = headersGetters[i];
         const [key, getter] = header;
 
-        config.headers.set(key, (getter as () => string)());
+        config.headers.set(key, (getter as HeaderGetter)());
       }
 
       return config;

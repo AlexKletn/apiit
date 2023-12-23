@@ -1,4 +1,4 @@
-import { Methods, ResponseFormat } from '@/Host/types';
+import { HeaderStatic, Methods, ResponseFormat } from '@/Host/types';
 
 export type RequestParams = Record<string, unknown>;
 
@@ -10,6 +10,7 @@ export interface RequestOptions {
     data?: FormData | Record<string, unknown> | string,
     params?: Record<string, unknown>
   }
+  headers?: Record<string, HeaderStatic>,
 }
 
 export interface ProgressEvent {

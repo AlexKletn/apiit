@@ -151,6 +151,16 @@ describe('endpoint creating', () => {
 
     expect(endpoint).toBeInstanceOf(Endpoint);
   });
+
+  test('create with headers', () => {
+    const endpoint = host.createEndpoint('get', 'test', {
+      headers: {
+        a: 'fsd',
+      },
+    });
+
+    expect(endpoint).toBeInstanceOf(Endpoint);
+  });
 });
 
 describe('static methods', () => {

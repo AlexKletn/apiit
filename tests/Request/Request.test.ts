@@ -42,7 +42,7 @@ describe('Send request', () => {
     await expect(request.getResult()).resolves.not.toBeNull();
   });
 
-  test('payload (data and query params)', async () => {
+  test('with payload (data and query params)', async () => {
     const data = {
       foo: 'bar',
     };
@@ -69,6 +69,30 @@ describe('Send request', () => {
 
     await request.getResult().then((response) => {
       expect(response.data).toMatchObject({ data, params });
+    });
+  });
+
+  test('with headers', async () => {
+    const headers = {
+      Authorization: 'XXX',
+    };
+
+    server.get('/success')
+      .mockImplementationOnce((ctx) => {
+        ctx.status = 200;
+        ctx.body = {
+          Authorization: ctx.request.headers.authorization,
+        };
+      });
+
+    const request = Request.create({
+      method: 'get',
+      path: 'success',
+      headers,
+    }, axios.create({ baseURL: server.getURL().href }));
+
+    await request.getResult().then((response) => {
+      expect(response.data).toMatchObject(headers);
     });
   });
 

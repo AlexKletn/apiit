@@ -34,6 +34,9 @@ describe('Endpoint create', () => {
     {
       responseFormat: 'text',
       dataFormat: 'form-data',
+      headers: {
+        foo: 'bar',
+      },
     },
   ] as EndpointOptions[])('create endpoint with options: responseFormat=$responseFormat; dataFormat=$dataFormat', (options) => {
     expect(() => Endpoint.create('get', '/', options)).not.toThrow();

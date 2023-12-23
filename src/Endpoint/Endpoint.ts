@@ -5,12 +5,14 @@ import type { RequestParams } from '@/Request';
 import { Request } from '@/Request';
 
 import type { Methods } from '@/Host';
+import { HeaderStatic } from '@/Host';
 import type { EndpointOptions } from './types';
 
 const optionsDefaults: EndpointOptions = {
   dataFormat: 'json',
   responseFormat: 'json',
   paramsConfig: {},
+  headers: {},
 };
 
 class Endpoint<RequestType extends RequestParams, ResponseType> {
@@ -40,12 +42,14 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     this.#options = { ...optionsDefaults, ...options };
   }
 
-  request(payload: RequestType = {} as RequestType) {
+  request(payload: RequestType = {} as RequestType, headers?: Record<string, HeaderStatic>) {
     const {
       responseFormat,
     } = this.#options;
 
-    const { body, query, pathParams } = this.#generateParams(payload);
+    const {
+      body, query, pathParams,
+    } = this.#generateParams(payload);
     const url = createUrl({
       path: this.#path,
       pathParams,
@@ -58,6 +62,10 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
       payload: {
         data: body,
         params: query,
+      },
+      headers: {
+        ...this.#options.headers,
+        ...headers,
       },
     }, this.#axios);
   }
