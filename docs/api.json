@@ -4,16 +4,16 @@
   "name": "apiit",
   "version": "0.1.1",
   "readme": "Apiit \n---\n\n*Library for creating an organized API layer*\n\n[Docs](https://apiit.obscur.space)\n",
-  "changelog": "## [1.0.2](https://github.com/AlexKletn/apiit/compare/v1.0.1...v1.0.2) (2023-12-23)\n\n\n### Bug Fixes\n\n* depends fix ([a995f02](https://github.com/AlexKletn/apiit/commit/a995f0219c88f324e32961af931fd3b975e5f35e))\n* errors after tests ([bf2f1c6](https://github.com/AlexKletn/apiit/commit/bf2f1c6b6ec59d2302224df11306fbdf2eefbe0c))\n\n## [1.0.1](https://github.com/AlexKletn/apiit/compare/v1.0.0...v1.0.1) (2023-12-22)\n\n\n### Bug Fixes\n\n* host create signature ([911ad10](https://github.com/AlexKletn/apiit/commit/911ad10f36caa02dad1b5da8a49198e8678fda0e))\n\n# 1.0.0 (2023-12-21)\n\n\n### Bug Fixes\n\n* host constructor ([14c5154](https://github.com/AlexKletn/apiit/commit/14c5154089a008364a6cf748ed2fb184a4d1403f))\n* lockfile ([0f99bae](https://github.com/AlexKletn/apiit/commit/0f99bae3761f6131f2e4366ca2d90b5b6abf22b7))\n* package types ([92ac868](https://github.com/AlexKletn/apiit/commit/92ac868740a8455ea8e6ff3ab17d6765b158ae17))\n* package-lock ([927cf74](https://github.com/AlexKletn/apiit/commit/927cf74291281d23cb1257446dedbcf56e41498f))\n* request error ([859f377](https://github.com/AlexKletn/apiit/commit/859f377c98dffd740883965b45b4f7f2a51713a2))\n* request error ([bd2b27c](https://github.com/AlexKletn/apiit/commit/bd2b27cb3eea026dceba19258ea8d7f283e78c4a))\n* request parser ([21e19d0](https://github.com/AlexKletn/apiit/commit/21e19d01e6e071ed676cf3bd94b526838096a048))\n* types ([241dbc5](https://github.com/AlexKletn/apiit/commit/241dbc553fe6a0a8af27f58eaa63daaaf89dec0a))\n* types ([98a5fc3](https://github.com/AlexKletn/apiit/commit/98a5fc33222eb4742727745933a3c9a3fafab941))\n\n\n### Features\n\n* constructors ([ab72559](https://github.com/AlexKletn/apiit/commit/ab72559eeff07003da0e44edef585b4482cf23a3))\n* docs ([b099a7b](https://github.com/AlexKletn/apiit/commit/b099a7b3ce8a66c7ebef843f2f33d165403526f2))\n* docs ([a45b02e](https://github.com/AlexKletn/apiit/commit/a45b02e80723a9467063680f3f6bee7a8c65f38f))\n* docs ([18802f3](https://github.com/AlexKletn/apiit/commit/18802f33911bb2ec685d29119eb8e956b711cbb2))\n* docs ([70dbc55](https://github.com/AlexKletn/apiit/commit/70dbc5501a067a608d5f6bdc723ac4f76ecfd7c7))\n* events ([8b3b827](https://github.com/AlexKletn/apiit/commit/8b3b82751e1bb4859d7c399a0e108a1ce56b1586))\n* host, endpoint, request and respose implement ([7269e54](https://github.com/AlexKletn/apiit/commit/7269e54f93d426fc5da60e21eea9e5d74a0d9f59))\n* readme ([a5dab62](https://github.com/AlexKletn/apiit/commit/a5dab62d0fa3bb91662e0a835a69a0c4b43fa577))\n* readme ([d3d38eb](https://github.com/AlexKletn/apiit/commit/d3d38eb8a3d988a81541e4ac0ff099d68490687a))\n* request exception ([593f8c1](https://github.com/AlexKletn/apiit/commit/593f8c12d537d72b900c4b3018d6b5ab8b5440ad))\n* update apis ([5224d06](https://github.com/AlexKletn/apiit/commit/5224d069e0b0fe7d2a44cc0ff473a9d4a0bd148e))\n* update README ([f727375](https://github.com/AlexKletn/apiit/commit/f727375a5986a9d515e190187f90dccd37140d3a))\n* update README ([e5abcf0](https://github.com/AlexKletn/apiit/commit/e5abcf0ff99084ce44379d9867ba6d9609d1f8de))\n* update version ([54524b8](https://github.com/AlexKletn/apiit/commit/54524b88ed983c002097ddfd4f70d3fc9a8b9b32))\n",
+  "changelog": "## [1.1.1](https://github.com/AlexKletn/apiit/compare/v1.1.0...v1.1.1) (2023-12-23)\n\n\n### Bug Fixes\n\n* exclude tests from build ([bd52bde](https://github.com/AlexKletn/apiit/commit/bd52bdee5509bb4b0c5e9b3faeae81d11fff21e4))\n\n# [1.1.0](https://github.com/AlexKletn/apiit/compare/v1.0.2...v1.1.0) (2023-12-23)\n\n\n### Features\n\n* headers in endpoint and request ([ef04365](https://github.com/AlexKletn/apiit/commit/ef04365815040bc9642361c7317f42285ba7bdc8))\n\n## [1.0.2](https://github.com/AlexKletn/apiit/compare/v1.0.1...v1.0.2) (2023-12-23)\n\n\n### Bug Fixes\n\n* depends fix ([a995f02](https://github.com/AlexKletn/apiit/commit/a995f0219c88f324e32961af931fd3b975e5f35e))\n* errors after tests ([bf2f1c6](https://github.com/AlexKletn/apiit/commit/bf2f1c6b6ec59d2302224df11306fbdf2eefbe0c))\n\n## [1.0.1](https://github.com/AlexKletn/apiit/compare/v1.0.0...v1.0.1) (2023-12-22)\n\n\n### Bug Fixes\n\n* host create signature ([911ad10](https://github.com/AlexKletn/apiit/commit/911ad10f36caa02dad1b5da8a49198e8678fda0e))\n\n# 1.0.0 (2023-12-21)\n\n\n### Bug Fixes\n\n* host constructor ([14c5154](https://github.com/AlexKletn/apiit/commit/14c5154089a008364a6cf748ed2fb184a4d1403f))\n* lockfile ([0f99bae](https://github.com/AlexKletn/apiit/commit/0f99bae3761f6131f2e4366ca2d90b5b6abf22b7))\n* package types ([92ac868](https://github.com/AlexKletn/apiit/commit/92ac868740a8455ea8e6ff3ab17d6765b158ae17))\n* package-lock ([927cf74](https://github.com/AlexKletn/apiit/commit/927cf74291281d23cb1257446dedbcf56e41498f))\n* request error ([859f377](https://github.com/AlexKletn/apiit/commit/859f377c98dffd740883965b45b4f7f2a51713a2))\n* request error ([bd2b27c](https://github.com/AlexKletn/apiit/commit/bd2b27cb3eea026dceba19258ea8d7f283e78c4a))\n* request parser ([21e19d0](https://github.com/AlexKletn/apiit/commit/21e19d01e6e071ed676cf3bd94b526838096a048))\n* types ([241dbc5](https://github.com/AlexKletn/apiit/commit/241dbc553fe6a0a8af27f58eaa63daaaf89dec0a))\n* types ([98a5fc3](https://github.com/AlexKletn/apiit/commit/98a5fc33222eb4742727745933a3c9a3fafab941))\n\n\n### Features\n\n* constructors ([ab72559](https://github.com/AlexKletn/apiit/commit/ab72559eeff07003da0e44edef585b4482cf23a3))\n* docs ([b099a7b](https://github.com/AlexKletn/apiit/commit/b099a7b3ce8a66c7ebef843f2f33d165403526f2))\n* docs ([a45b02e](https://github.com/AlexKletn/apiit/commit/a45b02e80723a9467063680f3f6bee7a8c65f38f))\n* docs ([18802f3](https://github.com/AlexKletn/apiit/commit/18802f33911bb2ec685d29119eb8e956b711cbb2))\n* docs ([70dbc55](https://github.com/AlexKletn/apiit/commit/70dbc5501a067a608d5f6bdc723ac4f76ecfd7c7))\n* events ([8b3b827](https://github.com/AlexKletn/apiit/commit/8b3b82751e1bb4859d7c399a0e108a1ce56b1586))\n* host, endpoint, request and respose implement ([7269e54](https://github.com/AlexKletn/apiit/commit/7269e54f93d426fc5da60e21eea9e5d74a0d9f59))\n* readme ([a5dab62](https://github.com/AlexKletn/apiit/commit/a5dab62d0fa3bb91662e0a835a69a0c4b43fa577))\n* readme ([d3d38eb](https://github.com/AlexKletn/apiit/commit/d3d38eb8a3d988a81541e4ac0ff099d68490687a))\n* request exception ([593f8c1](https://github.com/AlexKletn/apiit/commit/593f8c12d537d72b900c4b3018d6b5ab8b5440ad))\n* update apis ([5224d06](https://github.com/AlexKletn/apiit/commit/5224d069e0b0fe7d2a44cc0ff473a9d4a0bd148e))\n* update README ([f727375](https://github.com/AlexKletn/apiit/commit/f727375a5986a9d515e190187f90dccd37140d3a))\n* update README ([e5abcf0](https://github.com/AlexKletn/apiit/commit/e5abcf0ff99084ce44379d9867ba6d9609d1f8de))\n* update version ([54524b8](https://github.com/AlexKletn/apiit/commit/54524b88ed983c002097ddfd4f70d3fc9a8b9b32))\n",
   "classes": [
     {
       "id": 69,
       "name": "Endpoint",
       "source": {
-        "line": 18,
+        "line": 21,
         "file": "Endpoint.ts",
         "path": "src/Endpoint",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L18"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L21"
       },
       "namespaceParentId": null,
       "comment": {
@@ -27,11 +27,11 @@
       "implementsType": [],
       "typeParameters": [
         {
-          "id": 116,
+          "id": 125,
           "name": "RequestType",
           "constraint": {
             "kind": "reference",
-            "id": 163,
+            "id": 176,
             "name": "RequestParams",
             "packageName": "apiit",
             "typeArguments": []
@@ -39,7 +39,7 @@
           "default": null
         },
         {
-          "id": 117,
+          "id": 126,
           "name": "ResponseType",
           "constraint": null,
           "default": null
@@ -49,10 +49,10 @@
         "id": 78,
         "name": "constructor",
         "source": {
-          "line": 33,
+          "line": 36,
           "file": "Endpoint.ts",
           "path": "src/Endpoint",
-          "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L33"
+          "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L36"
         },
         "comment": {
           "description": null,
@@ -79,7 +79,7 @@
           },
           {
             "id": 83,
-            "name": "path",
+            "name": "url",
             "comment": {
               "description": null,
               "blockTags": [],
@@ -104,7 +104,7 @@
             "optional": true,
             "type": {
               "kind": "reference",
-              "id": 121,
+              "id": 130,
               "name": "EndpointOptions",
               "packageName": "apiit",
               "typeArguments": []
@@ -135,10 +135,10 @@
           "id": 86,
           "name": "#axios",
           "source": {
-            "line": 28,
+            "line": 31,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L28"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L31"
           },
           "comment": {
             "description": null,
@@ -163,10 +163,10 @@
           "id": 88,
           "name": "#method",
           "source": {
-            "line": 30,
+            "line": 33,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L30"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L33"
           },
           "comment": {
             "description": null,
@@ -188,10 +188,10 @@
           "id": 89,
           "name": "#options",
           "source": {
-            "line": 31,
+            "line": 34,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L31"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L34"
           },
           "comment": {
             "description": null,
@@ -206,7 +206,7 @@
           "optional": false,
           "type": {
             "kind": "reference",
-            "id": 121,
+            "id": 130,
             "name": "EndpointOptions",
             "packageName": "apiit",
             "typeArguments": []
@@ -216,10 +216,10 @@
           "id": 87,
           "name": "#path",
           "source": {
-            "line": 29,
+            "line": 32,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L29"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L32"
           },
           "comment": {
             "description": null,
@@ -240,65 +240,13 @@
       ],
       "methods": [
         {
-          "id": 104,
-          "name": "#generateBody",
-          "source": {
-            "line": 87,
-            "file": "Endpoint.ts",
-            "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L87"
-          },
-          "parentId": 69,
-          "accessibility": "private",
-          "abstract": false,
-          "static": false,
-          "signatures": [
-            {
-              "id": 105,
-              "name": "#generateBody",
-              "comment": {
-                "description": null,
-                "blockTags": [],
-                "modifierTags": []
-              },
-              "typeParameters": [],
-              "parameters": [
-                {
-                  "id": 106,
-                  "name": "payload",
-                  "comment": {
-                    "description": null,
-                    "blockTags": [],
-                    "modifierTags": []
-                  },
-                  "rest": false,
-                  "optional": false,
-                  "type": {
-                    "kind": "reference",
-                    "id": 163,
-                    "name": "RequestParams",
-                    "packageName": "apiit",
-                    "typeArguments": []
-                  }
-                }
-              ],
-              "returnType": {
-                "kind": "reflection",
-                "properties": null,
-                "signatures": null,
-                "methods": null
-              }
-            }
-          ]
-        },
-        {
           "id": 94,
-          "name": "#generateParams",
+          "name": "#generatePayload",
           "source": {
-            "line": 74,
+            "line": 86,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L74"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L86"
           },
           "parentId": 69,
           "accessibility": "private",
@@ -307,7 +255,7 @@
           "signatures": [
             {
               "id": 95,
-              "name": "#generateParams",
+              "name": "#generatePayload",
               "comment": {
                 "description": null,
                 "blockTags": [],
@@ -327,7 +275,7 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 163,
+                    "id": 176,
                     "name": "RequestParams",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -338,7 +286,7 @@
                 "kind": "reflection",
                 "properties": [
                   {
-                    "id": 98,
+                    "id": 100,
                     "name": "body",
                     "comment": {
                       "description": null,
@@ -348,14 +296,12 @@
                     "readonly": false,
                     "optional": false,
                     "type": {
-                      "kind": "reflection",
-                      "properties": null,
-                      "signatures": null,
-                      "methods": null
+                      "kind": "intrinsic",
+                      "type": "any"
                     }
                   },
                   {
-                    "id": 102,
+                    "id": 98,
                     "name": "pathParams",
                     "comment": {
                       "description": null,
@@ -365,14 +311,12 @@
                     "readonly": false,
                     "optional": false,
                     "type": {
-                      "kind": "reflection",
-                      "properties": null,
-                      "signatures": null,
-                      "methods": null
+                      "kind": "intrinsic",
+                      "type": "any"
                     }
                   },
                   {
-                    "id": 100,
+                    "id": 99,
                     "name": "query",
                     "comment": {
                       "description": null,
@@ -382,10 +326,8 @@
                     "readonly": false,
                     "optional": false,
                     "type": {
-                      "kind": "reflection",
-                      "properties": null,
-                      "signatures": null,
-                      "methods": null
+                      "kind": "intrinsic",
+                      "type": "any"
                     }
                   }
                 ],
@@ -396,13 +338,13 @@
           ]
         },
         {
-          "id": 112,
-          "name": "#generatePathParams",
+          "id": 113,
+          "name": "#getBodyUsingConfig",
           "source": {
-            "line": 141,
+            "line": 162,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L141"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L162"
           },
           "parentId": 69,
           "accessibility": "private",
@@ -410,8 +352,8 @@
           "static": false,
           "signatures": [
             {
-              "id": 113,
-              "name": "#generatePathParams",
+              "id": 114,
+              "name": "#getBodyUsingConfig",
               "comment": {
                 "description": null,
                 "blockTags": [],
@@ -420,7 +362,7 @@
               "typeParameters": [],
               "parameters": [
                 {
-                  "id": 114,
+                  "id": 115,
                   "name": "payload",
                   "comment": {
                     "description": null,
@@ -431,7 +373,7 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 163,
+                    "id": 176,
                     "name": "RequestParams",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -448,13 +390,13 @@
           ]
         },
         {
-          "id": 108,
-          "name": "#generateQuery",
+          "id": 121,
+          "name": "#getPathParamsUsingConfig",
           "source": {
-            "line": 123,
+            "line": 216,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L123"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L216"
           },
           "parentId": 69,
           "accessibility": "private",
@@ -462,8 +404,8 @@
           "static": false,
           "signatures": [
             {
-              "id": 109,
-              "name": "#generateQuery",
+              "id": 122,
+              "name": "#getPathParamsUsingConfig",
               "comment": {
                 "description": null,
                 "blockTags": [],
@@ -472,7 +414,7 @@
               "typeParameters": [],
               "parameters": [
                 {
-                  "id": 110,
+                  "id": 123,
                   "name": "payload",
                   "comment": {
                     "description": null,
@@ -483,7 +425,7 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 163,
+                    "id": 176,
                     "name": "RequestParams",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -495,6 +437,168 @@
                 "properties": null,
                 "signatures": null,
                 "methods": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 117,
+          "name": "#getQueryUsingConfig",
+          "source": {
+            "line": 198,
+            "file": "Endpoint.ts",
+            "path": "src/Endpoint",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L198"
+          },
+          "parentId": 69,
+          "accessibility": "private",
+          "abstract": false,
+          "static": false,
+          "signatures": [
+            {
+              "id": 118,
+              "name": "#getQueryUsingConfig",
+              "comment": {
+                "description": null,
+                "blockTags": [],
+                "modifierTags": []
+              },
+              "typeParameters": [],
+              "parameters": [
+                {
+                  "id": 119,
+                  "name": "payload",
+                  "comment": {
+                    "description": null,
+                    "blockTags": [],
+                    "modifierTags": []
+                  },
+                  "rest": false,
+                  "optional": false,
+                  "type": {
+                    "kind": "reference",
+                    "id": 176,
+                    "name": "RequestParams",
+                    "packageName": "apiit",
+                    "typeArguments": []
+                  }
+                }
+              ],
+              "returnType": {
+                "kind": "reflection",
+                "properties": null,
+                "signatures": null,
+                "methods": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 101,
+          "name": "#payloadStepOne",
+          "source": {
+            "line": 119,
+            "file": "Endpoint.ts",
+            "path": "src/Endpoint",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L119"
+          },
+          "parentId": 69,
+          "accessibility": "private",
+          "abstract": false,
+          "static": false,
+          "signatures": [
+            {
+              "id": 102,
+              "name": "#payloadStepOne",
+              "comment": {
+                "description": null,
+                "blockTags": [],
+                "modifierTags": []
+              },
+              "typeParameters": [],
+              "parameters": [
+                {
+                  "id": 103,
+                  "name": "payload",
+                  "comment": {
+                    "description": null,
+                    "blockTags": [],
+                    "modifierTags": []
+                  },
+                  "rest": false,
+                  "optional": false,
+                  "type": {
+                    "kind": "reference",
+                    "id": 176,
+                    "name": "RequestParams",
+                    "packageName": "apiit",
+                    "typeArguments": []
+                  }
+                }
+              ],
+              "returnType": {
+                "kind": "array",
+                "type": {
+                  "kind": "reflection",
+                  "properties": null,
+                  "signatures": null,
+                  "methods": null
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 107,
+          "name": "#payloadStepTwo",
+          "source": {
+            "line": 142,
+            "file": "Endpoint.ts",
+            "path": "src/Endpoint",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L142"
+          },
+          "parentId": 69,
+          "accessibility": "private",
+          "abstract": false,
+          "static": false,
+          "signatures": [
+            {
+              "id": 108,
+              "name": "#payloadStepTwo",
+              "comment": {
+                "description": null,
+                "blockTags": [],
+                "modifierTags": []
+              },
+              "typeParameters": [],
+              "parameters": [
+                {
+                  "id": 109,
+                  "name": "payload",
+                  "comment": {
+                    "description": null,
+                    "blockTags": [],
+                    "modifierTags": []
+                  },
+                  "rest": false,
+                  "optional": false,
+                  "type": {
+                    "kind": "reference",
+                    "id": 176,
+                    "name": "RequestParams",
+                    "packageName": "apiit",
+                    "typeArguments": []
+                  }
+                }
+              ],
+              "returnType": {
+                "kind": "array",
+                "type": {
+                  "kind": "reflection",
+                  "properties": null,
+                  "signatures": null,
+                  "methods": null
+                }
               }
             }
           ]
@@ -503,10 +607,10 @@
           "id": 90,
           "name": "request",
           "source": {
-            "line": 45,
+            "line": 57,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L45"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L57"
           },
           "parentId": 69,
           "accessibility": "public",
@@ -574,7 +678,7 @@
               ],
               "returnType": {
                 "kind": "reference",
-                "id": 126,
+                "id": 137,
                 "name": "Request",
                 "packageName": "apiit",
                 "typeArguments": [
@@ -594,10 +698,10 @@
           "id": 70,
           "name": "create",
           "source": {
-            "line": 19,
+            "line": 22,
             "file": "Endpoint.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/Endpoint.ts#L19"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/Endpoint.ts#L22"
           },
           "parentId": 69,
           "accessibility": "public",
@@ -618,7 +722,7 @@
                   "name": "RequestType",
                   "constraint": {
                     "kind": "reference",
-                    "id": 163,
+                    "id": 176,
                     "name": "RequestParams",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -675,7 +779,7 @@
                   "optional": true,
                   "type": {
                     "kind": "reference",
-                    "id": 121,
+                    "id": 130,
                     "name": "EndpointOptions",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -734,7 +838,7 @@
         "line": 12,
         "file": "Host.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L12"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L12"
       },
       "namespaceParentId": null,
       "comment": {
@@ -754,7 +858,7 @@
           "line": 41,
           "file": "Host.ts",
           "path": "src/Host",
-          "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L41"
+          "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L41"
         },
         "comment": {
           "description": null,
@@ -810,7 +914,7 @@
             "line": 37,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L37"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L37"
           },
           "comment": {
             "description": null,
@@ -838,7 +942,7 @@
             "line": 35,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L35"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L35"
           },
           "comment": {
             "description": null,
@@ -878,7 +982,7 @@
             "line": 39,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L39"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L39"
           },
           "comment": {
             "description": null,
@@ -908,7 +1012,7 @@
             "line": 82,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L82"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L82"
           },
           "parentId": 8,
           "accessibility": "private",
@@ -939,7 +1043,7 @@
             "line": 97,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L97"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L97"
           },
           "parentId": 8,
           "accessibility": "private",
@@ -970,7 +1074,7 @@
             "line": 52,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L52"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L52"
           },
           "parentId": 8,
           "accessibility": "public",
@@ -991,7 +1095,7 @@
                   "name": "RequestType",
                   "constraint": {
                     "kind": "reference",
-                    "id": 163,
+                    "id": 176,
                     "name": "RequestParams",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -1048,7 +1152,7 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 121,
+                    "id": 130,
                     "name": "EndpointOptions",
                     "packageName": "apiit",
                     "typeArguments": []
@@ -1087,7 +1191,7 @@
             "line": 78,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L78"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L78"
           },
           "parentId": 8,
           "accessibility": "public",
@@ -1210,7 +1314,7 @@
             "line": 74,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L74"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L74"
           },
           "parentId": 8,
           "accessibility": "public",
@@ -1333,7 +1437,7 @@
             "line": 13,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L13"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L13"
           },
           "parentId": 8,
           "accessibility": "public",
@@ -1456,7 +1560,7 @@
             "line": 125,
             "file": "Host.ts",
             "path": "src/Host",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/Host.ts#L125"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/Host.ts#L125"
           },
           "parentId": 8,
           "accessibility": "public",
@@ -1539,13 +1643,13 @@
       ]
     },
     {
-      "id": 126,
+      "id": 137,
       "name": "Request",
       "source": {
         "line": 11,
         "file": "Request.ts",
         "path": "src/Request",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L11"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L11"
       },
       "namespaceParentId": null,
       "comment": {
@@ -1559,31 +1663,31 @@
       "implementsType": [],
       "typeParameters": [
         {
-          "id": 162,
+          "id": 175,
           "name": "ResponseType",
           "constraint": null,
           "default": null
         }
       ],
       "construct": {
-        "id": 132,
+        "id": 143,
         "name": "constructor",
         "source": {
-          "line": 21,
+          "line": 24,
           "file": "Request.ts",
           "path": "src/Request",
-          "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L21"
+          "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L24"
         },
         "comment": {
           "description": null,
           "blockTags": [],
           "modifierTags": []
         },
-        "parentId": 126,
+        "parentId": 137,
         "accessibility": "private",
         "parameters": [
           {
-            "id": 135,
+            "id": 146,
             "name": "__namedParameters",
             "comment": {
               "description": null,
@@ -1594,14 +1698,14 @@
             "optional": false,
             "type": {
               "kind": "reference",
-              "id": 164,
+              "id": 177,
               "name": "RequestOptions",
               "packageName": "apiit",
               "typeArguments": []
             }
           },
           {
-            "id": 136,
+            "id": 147,
             "name": "axios",
             "comment": {
               "description": null,
@@ -1622,20 +1726,20 @@
       },
       "properties": [
         {
-          "id": 137,
+          "id": 150,
           "name": "#controller",
           "source": {
-            "line": 16,
+            "line": 19,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L16"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L19"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "private",
           "abstract": false,
           "static": false,
@@ -1650,20 +1754,20 @@
           }
         },
         {
-          "id": 139,
+          "id": 152,
           "name": "#events",
           "source": {
-            "line": 19,
+            "line": 22,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L19"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L22"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "private",
           "abstract": false,
           "static": false,
@@ -1677,7 +1781,7 @@
             "typeArguments": [
               {
                 "kind": "reference",
-                "id": 182,
+                "id": 195,
                 "name": "RequestEvents",
                 "packageName": "apiit",
                 "typeArguments": []
@@ -1690,20 +1794,70 @@
           }
         },
         {
-          "id": 138,
-          "name": "#requestPromise",
+          "id": 149,
+          "name": "#method",
           "source": {
             "line": 17,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L17"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L17"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 126,
+          "parentId": 137,
+          "accessibility": "private",
+          "abstract": false,
+          "static": false,
+          "readonly": true,
+          "optional": false,
+          "type": {
+            "kind": "intrinsic",
+            "type": "string"
+          }
+        },
+        {
+          "id": 148,
+          "name": "#path",
+          "source": {
+            "line": 16,
+            "file": "Request.ts",
+            "path": "src/Request",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L16"
+          },
+          "comment": {
+            "description": null,
+            "blockTags": [],
+            "modifierTags": []
+          },
+          "parentId": 137,
+          "accessibility": "private",
+          "abstract": false,
+          "static": false,
+          "readonly": true,
+          "optional": false,
+          "type": {
+            "kind": "intrinsic",
+            "type": "string"
+          }
+        },
+        {
+          "id": 151,
+          "name": "#requestPromise",
+          "source": {
+            "line": 20,
+            "file": "Request.ts",
+            "path": "src/Request",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L20"
+          },
+          "comment": {
+            "description": null,
+            "blockTags": [],
+            "modifierTags": []
+          },
+          "parentId": 137,
           "accessibility": "private",
           "abstract": false,
           "static": false,
@@ -1717,7 +1871,7 @@
             "typeArguments": [
               {
                 "kind": "reference",
-                "id": 197,
+                "id": 210,
                 "name": "ResponseSuccessful",
                 "packageName": "apiit",
                 "typeArguments": [
@@ -1736,21 +1890,21 @@
       ],
       "methods": [
         {
-          "id": 159,
+          "id": 172,
           "name": "#responseReturn",
           "source": {
-            "line": 86,
+            "line": 92,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L86"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L92"
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "private",
           "abstract": false,
           "static": false,
           "signatures": [
             {
-              "id": 160,
+              "id": 173,
               "name": "#responseReturn",
               "comment": {
                 "description": null,
@@ -1760,7 +1914,7 @@
               "typeParameters": [],
               "parameters": [
                 {
-                  "id": 161,
+                  "id": 174,
                   "name": "options",
                   "comment": {
                     "description": null,
@@ -1771,7 +1925,7 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 190,
+                    "id": 203,
                     "name": "ResponseOptions",
                     "packageName": "apiit",
                     "typeArguments": [
@@ -1788,7 +1942,7 @@
               ],
               "returnType": {
                 "kind": "reference",
-                "id": 197,
+                "id": 210,
                 "name": "ResponseSuccessful",
                 "packageName": "apiit",
                 "typeArguments": [
@@ -1805,21 +1959,21 @@
           ]
         },
         {
-          "id": 142,
+          "id": 155,
           "name": "cancel",
           "source": {
-            "line": 70,
+            "line": 76,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L70"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L76"
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "public",
           "abstract": false,
           "static": false,
           "signatures": [
             {
-              "id": 143,
+              "id": 156,
               "name": "cancel",
               "comment": {
                 "description": null,
@@ -1836,21 +1990,21 @@
           ]
         },
         {
-          "id": 140,
+          "id": 153,
           "name": "getResult",
           "source": {
-            "line": 66,
+            "line": 72,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L66"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L72"
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "public",
           "abstract": false,
           "static": false,
           "signatures": [
             {
-              "id": 141,
+              "id": 154,
               "name": "getResult",
               "comment": {
                 "description": null,
@@ -1867,7 +2021,7 @@
                 "typeArguments": [
                   {
                     "kind": "reference",
-                    "id": 197,
+                    "id": 210,
                     "name": "ResponseSuccessful",
                     "packageName": "apiit",
                     "typeArguments": [
@@ -1886,21 +2040,21 @@
           ]
         },
         {
-          "id": 152,
+          "id": 165,
           "name": "off",
           "source": {
-            "line": 82,
+            "line": 88,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L82"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L88"
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "public",
           "abstract": false,
           "static": false,
           "signatures": [
             {
-              "id": 153,
+              "id": 166,
               "name": "off",
               "comment": {
                 "description": null,
@@ -1910,7 +2064,7 @@
               "typeParameters": [],
               "parameters": [
                 {
-                  "id": 154,
+                  "id": 167,
                   "name": "event",
                   "comment": {
                     "description": null,
@@ -1921,14 +2075,14 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 182,
+                    "id": 195,
                     "name": "RequestEvents",
                     "packageName": "apiit",
                     "typeArguments": []
                   }
                 },
                 {
-                  "id": 155,
+                  "id": 168,
                   "name": "handler",
                   "comment": {
                     "description": null,
@@ -1942,7 +2096,7 @@
                     "properties": null,
                     "signatures": [
                       {
-                        "id": 157,
+                        "id": 170,
                         "name": "__type",
                         "comment": {
                           "description": null,
@@ -1952,7 +2106,7 @@
                         "typeParameters": [],
                         "parameters": [
                           {
-                            "id": 158,
+                            "id": 171,
                             "name": "event",
                             "comment": {
                               "description": null,
@@ -1963,7 +2117,7 @@
                             "optional": false,
                             "type": {
                               "kind": "reference",
-                              "id": 173,
+                              "id": 186,
                               "name": "ProgressEvent",
                               "packageName": "apiit",
                               "typeArguments": []
@@ -1988,21 +2142,21 @@
           ]
         },
         {
-          "id": 144,
+          "id": 157,
           "name": "on",
           "source": {
-            "line": 75,
+            "line": 81,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L75"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L81"
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "public",
           "abstract": false,
           "static": false,
           "signatures": [
             {
-              "id": 145,
+              "id": 158,
               "name": "on",
               "comment": {
                 "description": null,
@@ -2011,7 +2165,7 @@
               },
               "typeParameters": [
                 {
-                  "id": 146,
+                  "id": 159,
                   "name": "Payload",
                   "constraint": null,
                   "default": null
@@ -2019,7 +2173,7 @@
               ],
               "parameters": [
                 {
-                  "id": 147,
+                  "id": 160,
                   "name": "event",
                   "comment": {
                     "description": null,
@@ -2030,14 +2184,14 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 182,
+                    "id": 195,
                     "name": "RequestEvents",
                     "packageName": "apiit",
                     "typeArguments": []
                   }
                 },
                 {
-                  "id": 148,
+                  "id": 161,
                   "name": "handler",
                   "comment": {
                     "description": null,
@@ -2051,7 +2205,7 @@
                     "properties": null,
                     "signatures": [
                       {
-                        "id": 150,
+                        "id": 163,
                         "name": "__type",
                         "comment": {
                           "description": null,
@@ -2061,7 +2215,7 @@
                         "typeParameters": [],
                         "parameters": [
                           {
-                            "id": 151,
+                            "id": 164,
                             "name": "event",
                             "comment": {
                               "description": null,
@@ -2097,21 +2251,21 @@
           ]
         },
         {
-          "id": 127,
+          "id": 138,
           "name": "create",
           "source": {
             "line": 12,
             "file": "Request.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/Request.ts#L12"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/Request.ts#L12"
           },
-          "parentId": 126,
+          "parentId": 137,
           "accessibility": "public",
           "abstract": false,
           "static": true,
           "signatures": [
             {
-              "id": 128,
+              "id": 139,
               "name": "create",
               "comment": {
                 "description": null,
@@ -2120,7 +2274,7 @@
               },
               "typeParameters": [
                 {
-                  "id": 129,
+                  "id": 140,
                   "name": "ResponseType",
                   "constraint": null,
                   "default": null
@@ -2128,7 +2282,7 @@
               ],
               "parameters": [
                 {
-                  "id": 130,
+                  "id": 141,
                   "name": "options",
                   "comment": {
                     "description": null,
@@ -2139,14 +2293,14 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 164,
+                    "id": 177,
                     "name": "RequestOptions",
                     "packageName": "apiit",
                     "typeArguments": []
                   }
                 },
                 {
-                  "id": 131,
+                  "id": 142,
                   "name": "axios",
                   "comment": {
                     "description": null,
@@ -2166,7 +2320,7 @@
               ],
               "returnType": {
                 "kind": "reference",
-                "id": 126,
+                "id": 137,
                 "name": "Request",
                 "packageName": "apiit",
                 "typeArguments": [
@@ -2185,13 +2339,13 @@
       ]
     },
     {
-      "id": 183,
+      "id": 196,
       "name": "ResponseParser",
       "source": {
         "line": 3,
         "file": "ResponseParser.ts",
         "path": "src/ResponseParser",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/ResponseParser.ts#L3"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/ResponseParser.ts#L3"
       },
       "namespaceParentId": null,
       "comment": {
@@ -2205,7 +2359,7 @@
       "implementsType": [],
       "typeParameters": [],
       "construct": {
-        "id": 188,
+        "id": 201,
         "name": "constructor",
         "source": null,
         "comment": {
@@ -2213,28 +2367,28 @@
           "blockTags": [],
           "modifierTags": []
         },
-        "parentId": 183,
+        "parentId": 196,
         "accessibility": "public",
         "parameters": []
       },
       "properties": [],
       "methods": [
         {
-          "id": 184,
+          "id": 197,
           "name": "parse",
           "source": {
             "line": 4,
             "file": "ResponseParser.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/ResponseParser.ts#L4"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/ResponseParser.ts#L4"
           },
-          "parentId": 183,
+          "parentId": 196,
           "accessibility": "public",
           "abstract": false,
           "static": true,
           "signatures": [
             {
-              "id": 185,
+              "id": 198,
               "name": "parse",
               "comment": {
                 "description": null,
@@ -2243,7 +2397,7 @@
               },
               "typeParameters": [
                 {
-                  "id": 186,
+                  "id": 199,
                   "name": "ResponseType",
                   "constraint": null,
                   "default": null
@@ -2251,7 +2405,7 @@
               ],
               "parameters": [
                 {
-                  "id": 187,
+                  "id": 200,
                   "name": "__namedParameters",
                   "comment": {
                     "description": null,
@@ -2262,7 +2416,7 @@
                   "optional": false,
                   "type": {
                     "kind": "reference",
-                    "id": 190,
+                    "id": 203,
                     "name": "ResponseOptions",
                     "packageName": "apiit",
                     "typeArguments": [
@@ -2279,7 +2433,7 @@
               ],
               "returnType": {
                 "kind": "reference",
-                "id": 197,
+                "id": 210,
                 "name": "ResponseSuccessful",
                 "packageName": "apiit",
                 "typeArguments": [
@@ -2307,7 +2461,7 @@
         "line": 3,
         "file": "Apiit.ts",
         "path": "src",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Apiit.ts#L3"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Apiit.ts#L3"
       },
       "namespaceParentId": null,
       "comment": {
@@ -2429,13 +2583,13 @@
   ],
   "interfaces": [
     {
-      "id": 121,
+      "id": 130,
       "name": "EndpointOptions",
       "source": {
         "line": 7,
         "file": "types.ts",
         "path": "src/Endpoint",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/types.ts#L7"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L7"
       },
       "namespaceParentId": null,
       "comment": {
@@ -2447,20 +2601,20 @@
       "typeParameters": [],
       "properties": [
         {
-          "id": 122,
+          "id": 131,
           "name": "dataFormat",
           "source": {
             "line": 8,
             "file": "types.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/types.ts#L8"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L8"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 121,
+          "parentId": 130,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2472,20 +2626,20 @@
           }
         },
         {
-          "id": 125,
+          "id": 134,
           "name": "headers",
           "source": {
             "line": 11,
             "file": "types.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/types.ts#L11"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L11"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 121,
+          "parentId": 130,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2509,45 +2663,95 @@
           }
         },
         {
-          "id": 124,
+          "id": 135,
           "name": "paramsConfig",
           "source": {
-            "line": 10,
+            "line": 13,
             "file": "types.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/types.ts#L10"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L13"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 121,
+          "parentId": 130,
           "readonly": false,
           "optional": true,
           "type": {
             "kind": "reference",
-            "id": 118,
+            "id": 127,
             "name": "ParamsConfig",
             "packageName": "apiit",
             "typeArguments": []
           }
         },
         {
-          "id": 123,
-          "name": "responseFormat",
+          "id": 136,
+          "name": "pathParamRegex",
           "source": {
-            "line": 9,
+            "line": 14,
             "file": "types.ts",
             "path": "src/Endpoint",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/types.ts#L9"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L14"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 121,
+          "parentId": 130,
+          "readonly": false,
+          "optional": true,
+          "type": {
+            "kind": "reference",
+            "id": null,
+            "name": "RegExp",
+            "packageName": "typescript",
+            "typeArguments": []
+          }
+        },
+        {
+          "id": 133,
+          "name": "queryParamsKeys",
+          "source": {
+            "line": 10,
+            "file": "types.ts",
+            "path": "src/Endpoint",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L10"
+          },
+          "comment": {
+            "description": null,
+            "blockTags": [],
+            "modifierTags": []
+          },
+          "parentId": 130,
+          "readonly": false,
+          "optional": true,
+          "type": {
+            "kind": "array",
+            "type": {
+              "kind": "intrinsic",
+              "type": "string"
+            }
+          }
+        },
+        {
+          "id": 132,
+          "name": "responseFormat",
+          "source": {
+            "line": 9,
+            "file": "types.ts",
+            "path": "src/Endpoint",
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L9"
+          },
+          "comment": {
+            "description": null,
+            "blockTags": [],
+            "modifierTags": []
+          },
+          "parentId": 130,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2562,13 +2766,13 @@
       "methods": []
     },
     {
-      "id": 173,
+      "id": 186,
       "name": "ProgressEvent",
       "source": {
         "line": 16,
         "file": "types.ts",
         "path": "src/Request",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L16"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L16"
       },
       "namespaceParentId": null,
       "comment": {
@@ -2580,20 +2784,20 @@
       "typeParameters": [],
       "properties": [
         {
-          "id": 177,
+          "id": 190,
           "name": "bytes",
           "source": {
             "line": 20,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L20"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L20"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": false,
           "type": {
@@ -2602,20 +2806,20 @@
           }
         },
         {
-          "id": 181,
+          "id": 194,
           "name": "download",
           "source": {
             "line": 24,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L24"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L24"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2624,20 +2828,20 @@
           }
         },
         {
-          "id": 179,
+          "id": 192,
           "name": "estimated",
           "source": {
             "line": 22,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L22"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L22"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2646,20 +2850,20 @@
           }
         },
         {
-          "id": 174,
+          "id": 187,
           "name": "loaded",
           "source": {
             "line": 17,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L17"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L17"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": false,
           "type": {
@@ -2668,20 +2872,20 @@
           }
         },
         {
-          "id": 176,
+          "id": 189,
           "name": "progress",
           "source": {
             "line": 19,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L19"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L19"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2690,20 +2894,20 @@
           }
         },
         {
-          "id": 178,
+          "id": 191,
           "name": "rate",
           "source": {
             "line": 21,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L21"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L21"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2712,20 +2916,20 @@
           }
         },
         {
-          "id": 175,
+          "id": 188,
           "name": "total",
           "source": {
             "line": 18,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L18"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L18"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2734,20 +2938,20 @@
           }
         },
         {
-          "id": 180,
+          "id": 193,
           "name": "upload",
           "source": {
             "line": 23,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L23"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L23"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 173,
+          "parentId": 186,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2759,13 +2963,13 @@
       "methods": []
     },
     {
-      "id": 164,
+      "id": 177,
       "name": "RequestOptions",
       "source": {
         "line": 5,
         "file": "types.ts",
         "path": "src/Request",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L5"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L5"
       },
       "namespaceParentId": null,
       "comment": {
@@ -2777,20 +2981,20 @@
       "typeParameters": [],
       "properties": [
         {
-          "id": 172,
+          "id": 185,
           "name": "headers",
           "source": {
             "line": 13,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L13"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L13"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 164,
+          "parentId": 177,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2814,20 +3018,20 @@
           }
         },
         {
-          "id": 166,
+          "id": 179,
           "name": "method",
           "source": {
             "line": 7,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L7"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L7"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 164,
+          "parentId": 177,
           "readonly": false,
           "optional": false,
           "type": {
@@ -2836,20 +3040,20 @@
           }
         },
         {
-          "id": 167,
+          "id": 180,
           "name": "path",
           "source": {
             "line": 8,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L8"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L8"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 164,
+          "parentId": 177,
           "readonly": false,
           "optional": false,
           "type": {
@@ -2858,27 +3062,27 @@
           }
         },
         {
-          "id": 168,
+          "id": 181,
           "name": "payload",
           "source": {
             "line": 9,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L9"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L9"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 164,
+          "parentId": 177,
           "readonly": false,
           "optional": true,
           "type": {
             "kind": "reflection",
             "properties": [
               {
-                "id": 170,
+                "id": 183,
                 "name": "data",
                 "comment": {
                   "description": null,
@@ -2921,7 +3125,7 @@
                 }
               },
               {
-                "id": 171,
+                "id": 184,
                 "name": "params",
                 "comment": {
                   "description": null,
@@ -2953,20 +3157,20 @@
           }
         },
         {
-          "id": 165,
+          "id": 178,
           "name": "responseFormat",
           "source": {
             "line": 6,
             "file": "types.ts",
             "path": "src/Request",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L6"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L6"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 164,
+          "parentId": 177,
           "readonly": false,
           "optional": true,
           "type": {
@@ -2981,13 +3185,13 @@
       "methods": []
     },
     {
-      "id": 190,
+      "id": 203,
       "name": "ResponseOptions",
       "source": {
         "line": 1,
         "file": "types.ts",
         "path": "src/ResponseParser",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L1"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L1"
       },
       "namespaceParentId": null,
       "comment": {
@@ -2998,7 +3202,7 @@
       "external": false,
       "typeParameters": [
         {
-          "id": 196,
+          "id": 209,
           "name": "ResponseType",
           "constraint": null,
           "default": null
@@ -3006,20 +3210,20 @@
       ],
       "properties": [
         {
-          "id": 191,
+          "id": 204,
           "name": "data",
           "source": {
             "line": 2,
             "file": "types.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L2"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L2"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 190,
+          "parentId": 203,
           "readonly": false,
           "optional": false,
           "type": {
@@ -3031,20 +3235,20 @@
           }
         },
         {
-          "id": 192,
+          "id": 205,
           "name": "headers",
           "source": {
             "line": 3,
             "file": "types.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L3"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L3"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 190,
+          "parentId": 203,
           "readonly": false,
           "optional": false,
           "type": {
@@ -3058,13 +3262,13 @@
       "methods": []
     },
     {
-      "id": 197,
+      "id": 210,
       "name": "ResponseSuccessful",
       "source": {
         "line": 8,
         "file": "types.ts",
         "path": "src/ResponseParser",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L8"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L8"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3075,7 +3279,7 @@
       "external": false,
       "typeParameters": [
         {
-          "id": 205,
+          "id": 218,
           "name": "ResponseType",
           "constraint": null,
           "default": null
@@ -3083,20 +3287,20 @@
       ],
       "properties": [
         {
-          "id": 198,
+          "id": 211,
           "name": "contentType",
           "source": {
             "line": 9,
             "file": "types.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L9"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L9"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 197,
+          "parentId": 210,
           "readonly": false,
           "optional": true,
           "type": {
@@ -3105,20 +3309,20 @@
           }
         },
         {
-          "id": 200,
+          "id": 213,
           "name": "data",
           "source": {
             "line": 2,
             "file": "types.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L2"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L2"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 197,
+          "parentId": 210,
           "readonly": false,
           "optional": false,
           "type": {
@@ -3130,20 +3334,20 @@
           }
         },
         {
-          "id": 199,
+          "id": 212,
           "name": "fileName",
           "source": {
             "line": 10,
             "file": "types.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L10"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L10"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 197,
+          "parentId": 210,
           "readonly": false,
           "optional": true,
           "type": {
@@ -3152,20 +3356,20 @@
           }
         },
         {
-          "id": 201,
+          "id": 214,
           "name": "headers",
           "source": {
             "line": 3,
             "file": "types.ts",
             "path": "src/ResponseParser",
-            "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/ResponseParser/types.ts#L3"
+            "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/ResponseParser/types.ts#L3"
           },
           "comment": {
             "description": null,
             "blockTags": [],
             "modifierTags": []
           },
-          "parentId": 197,
+          "parentId": 210,
           "readonly": false,
           "optional": false,
           "type": {
@@ -3188,7 +3392,7 @@
         "line": 2,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L2"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L2"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3223,7 +3427,7 @@
         "line": 7,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L7"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L7"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3272,7 +3476,7 @@
         "line": 6,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L6"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L6"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3303,7 +3507,7 @@
         "line": 9,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L9"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L9"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3352,7 +3556,7 @@
         "line": 4,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L4"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L4"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3387,7 +3591,7 @@
         "line": 1,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L1"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L1"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3428,13 +3632,13 @@
       }
     },
     {
-      "id": 118,
+      "id": 127,
       "name": "ParamsConfig",
       "source": {
         "line": 3,
         "file": "types.ts",
         "path": "src/Endpoint",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Endpoint/types.ts#L3"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Endpoint/types.ts#L3"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3458,7 +3662,7 @@
             "kind": "reflection",
             "properties": [
               {
-                "id": 120,
+                "id": 129,
                 "name": "in",
                 "comment": {
                   "description": null,
@@ -3481,10 +3685,6 @@
                     {
                       "kind": "literal",
                       "value": "path"
-                    },
-                    {
-                      "kind": "literal",
-                      "value": "header"
                     }
                   ]
                 }
@@ -3497,13 +3697,13 @@
       }
     },
     {
-      "id": 182,
+      "id": 195,
       "name": "RequestEvents",
       "source": {
         "line": 27,
         "file": "types.ts",
         "path": "src/Request",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L27"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L27"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3544,13 +3744,13 @@
       }
     },
     {
-      "id": 163,
+      "id": 176,
       "name": "RequestParams",
       "source": {
         "line": 3,
         "file": "types.ts",
         "path": "src/Request",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Request/types.ts#L3"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Request/types.ts#L3"
       },
       "namespaceParentId": null,
       "comment": {
@@ -3584,7 +3784,7 @@
         "line": 3,
         "file": "types.ts",
         "path": "src/Host",
-        "url": "https://github.com/AlexKletn/apiit/blob/ef04365/src/Host/types.ts#L3"
+        "url": "https://github.com/AlexKletn/apiit/blob/41fa033/src/Host/types.ts#L3"
       },
       "namespaceParentId": null,
       "comment": {
