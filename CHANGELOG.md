@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/AlexKletn/apiit/compare/v1.1.1...v1.2.0) (2023-12-29)
+
+
+### Features
+
+* endpoint config simplify ([41fa033](https://github.com/AlexKletn/apiit/commit/41fa033cf8925b9ce707eb87bd69b7e2d2fcce9a))
+
 ## [1.1.1](https://github.com/AlexKletn/apiit/compare/v1.1.0...v1.1.1) (2023-12-23)
 
 
