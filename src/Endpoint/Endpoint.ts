@@ -11,9 +11,12 @@ import type { EndpointOptions } from './types';
 const optionsDefaults: EndpointOptions = {
   dataFormat: 'json',
   responseFormat: 'json',
-  paramsConfig: {},
+  queryParamsKeys: [],
   headers: {},
+  pathParamRegex: /:([A-Z0-9_.\-~]+)/i,
 };
+
+const URL_REGEXP = /([A-Za-z]{3,9}:(?:\/\/)?(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?)?((?:\/[+~%/.\w\-_:]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?/;
 
 class Endpoint<RequestType extends RequestParams, ResponseType> {
   static create<RequestType extends RequestParams, ResponseType>(
@@ -32,14 +35,23 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
 
   private constructor(
     method: Methods,
-    path: string,
+    url: string,
     options?: EndpointOptions,
     axiosInstance?: AxiosInstance,
   ) {
-    this.#axios = axiosInstance ?? axios.create();
-    this.#path = path;
-    this.#method = method;
+    const [, origin, path] = url.match(URL_REGEXP);
+
+    this.#axios = axiosInstance ?? axios.create({
+      baseURL: origin,
+    });
+
+    this.#path = `${path}`;
+    this.#method = `${method}`;
     this.#options = { ...optionsDefaults, ...options };
+
+    if (this.#options.paramsConfig) {
+      console.warn('paramsConfig is deprecated');
+    }
   }
 
   request(payload: RequestType = {} as RequestType, headers?: Record<string, HeaderStatic>) {
@@ -49,7 +61,7 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
 
     const {
       body, query, pathParams,
-    } = this.#generateParams(payload);
+    } = this.#generatePayload(payload);
     const url = createUrl({
       path: this.#path,
       pathParams,
@@ -71,20 +83,83 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
   }
 
   /* istanbul ignore next */
-  #generateParams(payload: RequestParams) {
-    const body = this.#generateBody(payload);
-    const query = this.#generateQuery(payload);
-    const pathParams = this.#generatePathParams(payload);
+  #generatePayload(payload: RequestParams) {
+    if (this.#options.paramsConfig) {
+      const query = this.#getQueryUsingConfig(payload);
+      const pathParams = this.#getPathParamsUsingConfig(payload);
+      const body = this.#method !== 'get' ? this.#getBodyUsingConfig(payload) : undefined;
 
-    return {
-      body,
-      query,
-      pathParams,
+      return {
+        body,
+        query,
+        pathParams,
+      };
+    }
+
+    const parsedPayload = {
+      pathParams: undefined,
+      query: undefined,
+      body: undefined,
     };
+
+    const [pathParams, remainder] = this.#payloadStepOne(payload);
+    parsedPayload.pathParams = pathParams;
+
+    if (this.#method === 'get') {
+      parsedPayload.query = remainder;
+    } else {
+      const [query, body] = this.#payloadStepTwo(remainder);
+      parsedPayload.query = query;
+      parsedPayload.body = body;
+    }
+
+    return parsedPayload;
+  }
+
+  #payloadStepOne(payload: RequestParams) {
+    const { pathParamRegex } = this.#options;
+    const pathParamsKeys = this.#path
+      .replace(/\?.+/, '')
+      .replace(/#.+/, '')
+      .split('/')
+      .filter((pathSegment) => pathParamRegex.test(pathSegment))
+      .map((pathParamKey) => pathParamKey.replace(pathParamRegex, '$1'));
+
+    const remainder = [];
+    const pathParams = Object.entries(payload).filter(([key, value]) => {
+      const isPathParam = pathParamsKeys.includes(key);
+
+      if (!isPathParam) {
+        remainder.push([key, value]);
+      }
+
+      return isPathParam;
+    });
+
+    return [Object.fromEntries(pathParams), Object.fromEntries(remainder)];
+  }
+
+  #payloadStepTwo(payload: RequestParams) {
+    const { queryParamsKeys } = this.#options;
+
+    if (queryParamsKeys.length === 0) return [{}, payload];
+
+    const remainder = [];
+    const queryParams = Object.entries(payload).filter(([key, value]) => {
+      const isQueryParam = queryParamsKeys.includes(key);
+
+      if (!isQueryParam) {
+        remainder.push([key, value]);
+      }
+
+      return isQueryParam;
+    });
+
+    return [Object.fromEntries(queryParams), Object.fromEntries(remainder)];
   }
 
   /* istanbul ignore next */
-  #generateBody(payload: RequestParams) {
+  #getBodyUsingConfig(payload: RequestParams) {
     const {
       dataFormat,
       paramsConfig,
@@ -120,7 +195,7 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
   }
 
   /* istanbul ignore next */
-  #generateQuery(payload: RequestParams) {
+  #getQueryUsingConfig(payload: RequestParams) {
     const {
       paramsConfig,
     } = this.#options;
@@ -138,7 +213,7 @@ class Endpoint<RequestType extends RequestParams, ResponseType> {
     return query;
   }
 
-  #generatePathParams(payload: RequestParams) {
+  #getPathParamsUsingConfig(payload: RequestParams) {
     const {
       paramsConfig,
     } = this.#options;

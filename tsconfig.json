@@ -19,6 +19,6 @@
       ]
     }
   },
-  "include": ["src/**/*", "tests/**/*"],
-  "exclude": ["node_modules", ".manual", "release.config.js"]
+  "include": ["src/**/*", "tests/**/*", "release.config.js"],
+  "exclude": ["node_modules", ".manual"]
 }

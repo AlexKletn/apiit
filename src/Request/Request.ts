@@ -13,6 +13,9 @@ class Request<ResponseType> {
     return new Request<ResponseType>(options, axios);
   }
 
+  readonly #path: string;
+  readonly #method: string;
+
   readonly #controller = new AbortController();
   readonly #requestPromise: Promise<ResponseSuccessful<ResponseType>>;
 
@@ -23,10 +26,13 @@ class Request<ResponseType> {
   }: RequestOptions, axios: AxiosInstance) {
     const emit = this.#events.emit.bind(this.#events);
 
+    this.#path = path;
+    this.#method = method;
+
     this.#requestPromise = axios
       .request<ResponseType>({
-      method,
-      url: path,
+      method: this.#method,
+      url: this.#path,
       responseType: responseFormat,
       signal: this.#controller.signal,
       headers,

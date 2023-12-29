@@ -50,7 +50,7 @@ describe('Send request', () => {
       id: '69',
     };
 
-    server.get('/success')
+    server.get('/su')
       .mockImplementationOnce((ctx) => {
         ctx.status = 200;
         ctx.body = {
@@ -61,7 +61,7 @@ describe('Send request', () => {
 
     const request = Request.create({
       method: 'get',
-      path: 'success',
+      path: 'su',
       payload: {
         data, params,
       },
