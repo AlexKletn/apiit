@@ -49,6 +49,10 @@ class Host {
     this.#setEvents();
   }
 
+  updateHeaders(headers: Headers) {
+    Object.assign(this.#axios.defaults.headers.common, headers);
+  }
+
   createEndpoint<RequestType extends RequestParams, ResponseType>(
     method: Methods,
     path: string,

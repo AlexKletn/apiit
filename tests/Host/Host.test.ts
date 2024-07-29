@@ -27,6 +27,24 @@ describe('Create host', () => {
 
     expect(host).toBeInstanceOf(Host);
   });
+  test('use axios instance', () => {
+    const axiosInstance = axios.create({
+      headers: {
+        common: {
+          Accept: 'application/json',
+        },
+      },
+    });
+
+    const host = Host.create(axiosInstance);
+    const newHeaders = {
+      Accept: 'application/xml',
+    };
+
+    host.updateHeaders(newHeaders);
+
+    expect(axiosInstance.defaults.headers.common).toHaveProperty('Accept', newHeaders.Accept);
+  });
   test('error with create, use not string and not axios', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
