@@ -8,7 +8,7 @@ import type { ProgressEvent, RequestEvents, RequestOptions } from './types';
 import RequestFailedException from '@/Request/Exceptions/RequestFailedException';
 import { Headers } from '@/Host';
 
-class Request<ResponseType> {
+class Request<ResponseType> implements PromiseLike<ResponseSuccessful<ResponseType>> {
   static create<ResponseType>(options: RequestOptions, axios?: AxiosInstance) {
     return new Request<ResponseType>(options, axios);
   }
@@ -67,6 +67,30 @@ class Request<ResponseType> {
           },
         });
       });
+  }
+
+  then<
+    TResult1 = ResponseSuccessful<ResponseType>,
+    TResult2 = never,
+  >(
+    // eslint-disable-next-line max-len
+    onFulfilled?: (value: ResponseSuccessful<ResponseType>) => TResult1 | PromiseLike<TResult1> | undefined | null,
+    // eslint-disable-next-line max-len
+    onRejected?: (reason: RequestFailedException) => TResult2 | PromiseLike<TResult2> | undefined | null,
+  ): PromiseLike<TResult1 | TResult2> {
+    return this.#requestPromise.then(onFulfilled, onRejected);
+  }
+
+  catch<
+    TResult2 = RequestFailedException,
+  >(
+    // eslint-disable-next-line max-len
+    onRejected?: (reason: RequestFailedException) => TResult2 | PromiseLike<TResult2> | undefined | null,
+  ): PromiseLike<ResponseSuccessful<ResponseType>> {
+    // TODO: Find a better way to
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    return this.#requestPromise.catch(onRejected);
   }
 
   getResult() {

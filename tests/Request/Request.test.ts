@@ -42,6 +42,20 @@ describe('Send request', () => {
     await expect(request.getResult()).resolves.not.toBeNull();
   });
 
+  test('success then', async () => {
+    server.get('/success')
+      .mockImplementationOnce((ctx) => {
+        ctx.status = 200;
+      });
+
+    const request = Request.create({
+      method: 'get',
+      path: 'success',
+    }, axios.create({ baseURL: server.getURL().href }));
+
+    await expect(request).resolves.not.toBeNull();
+  });
+
   test('with payload (data and query params)', async () => {
     const data = {
       foo: 'bar',
@@ -114,6 +128,31 @@ describe('Send request', () => {
       }, axios.create({ baseURL: server.getURL().href }));
 
     await request.getResult().catch((e) => {
+      expect(e.data).toMatchObject(errors);
+      expect(e.status).toEqual(401);
+    });
+
+    await expect(request.getResult()).rejects.toThrow(RequestFailedException);
+  });
+
+  test('fail promise like', async () => {
+    const errors = {
+      field: 'you crazy',
+    };
+
+    server.get('/error')
+      .mockImplementation((ctx) => {
+        ctx.status = 401;
+        ctx.body = errors;
+      });
+
+    const request = Request
+      .create({
+        method: 'get',
+        path: 'error',
+      }, axios.create({ baseURL: server.getURL().href }));
+
+    await request.catch((e) => {
       expect(e.data).toMatchObject(errors);
       expect(e.status).toEqual(401);
     });
