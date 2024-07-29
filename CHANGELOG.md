@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/AlexKletn/apiit/compare/v1.2.0...v1.3.0) (2024-07-29)
+
+
+### Features
+
+* promise like request api ([f7ba534](https://github.com/AlexKletn/apiit/commit/f7ba5347c48f91d0c118652775e20ea5369dae3f))
+
 # [1.2.0](https://github.com/AlexKletn/apiit/compare/v1.1.1...v1.2.0) (2023-12-29)
 
 
