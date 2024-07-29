@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/AlexKletn/apiit/compare/v1.3.0...v1.4.0) (2024-07-29)
+
+
+### Features
+
+* updateHeaders ([1eb209c](https://github.com/AlexKletn/apiit/commit/1eb209ca408579baa32839e17a1af37da7fe5867))
+
 # [1.3.0](https://github.com/AlexKletn/apiit/compare/v1.2.0...v1.3.0) (2024-07-29)
 
 
